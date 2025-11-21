@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EL HASSAN EL GHOULALI – Digital Minaret</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic SEO -->
+  <meta name="description"
+        content="Developer & researcher in digital citizenship, AI, open data and legal-tech for Moroccan justice." />
+
+  <!-- Simple styling -->
+  <style>
+    :root {
+      --bg: #050816;
+      --card-bg: #0b1020;
+      --accent: #3b82f6;
+      --accent-soft: #1f2937;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 960px;
+      padding: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #020617, #020617 40%, #0b1120 100%);
+      border-radius: 1.75rem;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.75);
+      border: 1px solid #1f2937;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+      }
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid #111827;
+      padding-bottom: 1.5rem;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #38bdf8, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .title-block {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .name-en {
+      font-size: 1.35rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .name-ar {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+      direction: rtl;
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .tagline {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .location {
+      margin-top: 0.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid #1e293b;
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .links a span {
+      font-size: 0.9rem;
+    }
+
+    .links a:hover {
+      border-color: var(--accent);
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .sections {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    p {
+      margin: 0 0 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-main);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      list-style: disc;
+      color: var(--text-main);
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #111827;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #111827;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <div class="avatar">EH</div>
+        <div class="title-block">
+          <div class="name-en" id="name-en">EL HASSAN EL GHOULALI</div>
+          <div class="name-ar" id="name-ar">الحسان الغوالي</div>
+          <div class="tagline" id="tagline-en">
+            Developer & researcher in digital citizenship and knowledge justice · AI & open data · Legal-tech for Moroccan justice
+          </div>
+          <div class="location" id="location">
+            Boujdour, Laâyoune-Sakia El Hamra · Morocco
+          </div>
+          <div class="links">
+            <a id="link-github" href="https://github.com/premiernbr" target="_blank" rel="noopener">
+              <span>GitHub</span> @premiernbr
+            </a>
+            <a id="link-linkedin" href="https://www.linkedin.com/in/el-ghouali-el-hassan" target="_blank" rel="noopener">
+              <span>LinkedIn</span> Profile
+            </a>
+            <a id="link-facebook" href="https://www.facebook.com/amielghouali" target="_blank" rel="noopener">
+              <span>Facebook</span> أصدقاء العالم الافتراضي
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="sections">
+        <article>
+          <h2>About</h2>
+          <p>
+            I explore how AI and open data can support, not replace, humans — especially in the context of Moroccan justice
+            and the everyday work of court clerks.
+          </p>
+          <p>
+            The “Digital Minaret” hub groups together my LegalRAG experiments for Moroccan users, structured open-data workflows,
+            and educational content on justice, technology and access to clear legal information in Arabic and French.
+          </p>
+          <p>
+            Long term, the goal is simple: help people obtain trustworthy answers in a language they actually understand,
+            while respecting privacy, ethics and the limits of legal advice.
+          </p>
+
+          <h2>Focus topics</h2>
+          <div class="pill-list" id="focus-topics">
+            <!-- Filled from profile.json -->
+          </div>
+        </article>
+
+        <aside>
+          <h2>Projects</h2>
+          <ul id="projects">
+            <!-- Filled from profile.json -->
+          </ul>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>Digital Minaret · LegalRAG experiments for Moroccan users.</span>
+        <span>Last updated via GitHub · premiernbr</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    async function loadProfile() {
+      try {
+        const response = await fetch("../profile.json");
+        if (!response.ok) {
+          console.warn("Could not load profile.json:", response.status);
+          return;
+        }
+        const profile = await response.json();
+
+        // Names
+        if (profile.full_name_en) {
+          document.getElementById("name-en").textContent = profile.full_name_en;
+        }
+        if (profile.full_name_ar) {
+          document.getElementById("name-ar").textContent = profile.full_name_ar;
+        }
+
+        // Tagline
+        if (profile.tagline_en) {
+          document.getElementById("tagline-en").textContent = profile.tagline_en;
+        }
+
+        // Location
+        if (profile.location) {
+          const loc = profile.location;
+          const locText = [
+            loc.city,
+            loc.region,
+            loc.country_en
+          ].filter(Boolean).join(", ");
+          document.getElementById("location").textContent = locText;
+        }
+
+        // Links
+        if (profile.links) {
+          if (profile.links.github) {
+            document.getElementById("link-github").href = profile.links.github;
+          }
+          if (profile.links.linkedin) {
+            document.getElementById("link-linkedin").href = profile.links.linkedin;
+          }
+          if (profile.links.facebook) {
+            document.getElementById("link-facebook").href = profile.links.facebook;
+          }
+        }
+
+        // Focus topics
+        const topicsContainer = document.getElementById("focus-topics");
+        topicsContainer.innerHTML = "";
+        if (Array.isArray(profile.focus_topics)) {
+          profile.focus_topics.forEach(topic => {
+            const span = document.createElement("span");
+            span.className = "pill";
+            span.textContent = topic;
+            topicsContainer.appendChild(span);
+          });
+        }
+
+        // Projects
+        const projectsContainer = document.getElementById("projects");
+        projectsContainer.innerHTML = "";
+        if (Array.isArray(profile.projects)) {
+          profile.projects.forEach(p => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${p.name_en}</strong><br /><span style="color:#9ca3af;font-size:0.85rem;">${p.summary_en}</span>`;
+            projectsContainer.appendChild(li);
+          });
+        }
+      } catch (err) {
+        console.error("Error loading profile.json", err);
+      }
+    }
+
+    loadProfile();
+  </script>
+</body>
+</html>
