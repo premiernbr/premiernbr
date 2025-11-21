@@ -5,10 +5,10 @@
   <title>الحسان الغوالي · المنارة الرقمية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="الحسان الغوالي · المنارة الرقمية – تجارب LegalRAG للمغاربة، البيانات المفتوحة، المواطنة الرقمية." />
+        content="الحسان الغوالي · المنارة الرقمية – تجارب LegalRAG للمغاربة، البيانات المفتوحة، المواطنة الرقمية، وكتابة الضبط." />
   <meta property="og:title" content="الحسان الغوالي · المنارة الرقمية" />
   <meta property="og:description"
-        content="تجارب تقنية القانون المفتوح والذكاء الاصطناعي للعدالة في المغرب مع اهتمام بكتبة الضبط والعدالة المعرفية." />
+        content="تجارب تقنية القانون المفتوح والذكاء الاصطناعي للعدالة في المغرب مع اهتمام بكتابة الضبط والعدالة المعرفية." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://premiernbr.github.io/premiernbr/" />
 
@@ -141,16 +141,22 @@
     }
 
     .hero-orb {
-      width: 132px;
-      height: 132px;
-      border-radius: 999px;
-      border: 2px solid var(--accent);
+      width: 168px;
+      height: 168px;
+      border-radius: 22px;
+      border: 1px solid rgba(34, 211, 238, 0.65);
       overflow: hidden;
-      box-shadow: var(--shadow-chip);
+      box-shadow:
+        0 20px 42px rgba(15, 23, 42, 0.65),
+        0 0 0 1px rgba(56, 189, 248, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--card-soft);
+      background: linear-gradient(145deg, #1f2937, #0b1225);
+      position: relative;
+      transform: perspective(960px) rotateX(6deg) rotateY(-6deg);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
     }
 
     .hero-orb img {
@@ -158,6 +164,26 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      border-radius: 18px;
+    }
+
+    .hero-orb::after {
+      content: "";
+      position: absolute;
+      inset: -18%;
+      background: radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.25), transparent 42%),
+                  radial-gradient(circle at 80% 16%, rgba(94, 231, 253, 0.2), transparent 40%),
+                  radial-gradient(circle at 50% 82%, rgba(124, 58, 237, 0.2), transparent 38%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .hero-orb:hover {
+      transform: perspective(960px) rotateX(2deg) rotateY(2deg) translateY(-3px);
+      box-shadow:
+        0 24px 48px rgba(15, 23, 42, 0.72),
+        0 0 0 1px rgba(56, 189, 248, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 
     .avatar-inner {
@@ -165,13 +191,35 @@
       flex-direction: column;
       align-items: center;
       padding: 1.4rem 1.3rem 1.6rem;
-      border-radius: 999px;
-      background: radial-gradient(circle at top, #4f46e5, #0f172a);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      border-radius: 28px;
+      background: linear-gradient(135deg, #0b1024 0%, #1e1b4b 40%, #0f172a 100%);
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(148, 163, 184, 0.35);
       min-width: 215px;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+    }
+
+    .avatar-inner::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 22px;
+      background: linear-gradient(140deg, rgba(56, 189, 248, 0.12), rgba(124, 58, 237, 0.08));
+      border: 1px solid rgba(56, 189, 248, 0.32);
+      z-index: 0;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 12px 32px rgba(15, 23, 42, 0.55);
+      pointer-events: none;
+    }
+
+    .avatar-inner > * {
+      position: relative;
+      z-index: 1;
     }
 
     .avatar-role {
@@ -464,7 +512,7 @@
           <p class="hero-subtitle" data-i18n="heroSubtitle">
             <strong>مطور وباحث في المواطنة الرقمية والعدالة المعرفية.</strong>
             أستكشف كيف يمكن للذكاء الاصطناعي والبيانات المفتوحة أن تدعم البشر دون أن تحل محلهم،
-            لا سيما في سياق العدالة المغربية والعمل اليومي لكتبة الضبط.
+            لا سيما في سياق العدالة المغربية والعمل اليومي لكتابة الضبط.
           </p>
           <div class="hero-meta" data-i18n="heroMeta">
             بوجدور، العيون-الساقية الحمراء · المغرب ·
@@ -516,7 +564,7 @@
               ومحتوى تعليمي حول العدالة والتكنولوجيا والوصول إلى معلومات قانونية واضحة بالعربية والفرنسية.
             </p>
             <p data-i18n="aboutPara2">
-              أركز بشكل خاص على الأدوات التي تساعد <strong>كتبة الضبط</strong> والمواطنين العاديين
+              أركز بشكل خاص على الأدوات التي تساعد <strong>كتابة الضبط</strong> والمواطنين العاديين
               في الحصول على إجابات موثوقة بلغة يفهمونها فعلاً، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم
               المشورة القانونية.
             </p>
@@ -614,7 +662,7 @@
           const translations = {
             pageTitle: {
               ar: `الحسان الغوالي · المنارة الرقمية`,
-              fr: `EL HASSAN EL GHOULALI · Digital Minaret`
+              fr: `EL HASSAN EL GHOULALI · Minaret numérique`
             },
             pageDescription: {
               ar: `الحسان الغوالي · المنارة الرقمية – تجارب LegalRAG للمغاربة، البيانات المفتوحة والمواطنة الرقمية.`,
@@ -622,11 +670,11 @@
             },
             ogTitle: {
               ar: `الحسان الغوالي · المنارة الرقمية`,
-              fr: `EL HASSAN EL GHOULALI · Digital Minaret`
+              fr: `EL HASSAN EL GHOULALI · Minaret numérique`
             },
             ogDescription: {
-              ar: `تجارب LegalRAG للعدالة المغربية مع تركيز على كتبة الضبط والمواطنة الرقمية.`,
-              fr: `Expériences LegalRAG pour la justice marocaine axées sur les greffiers et la citoyenneté الرقمية.`
+              ar: `تجارب LegalRAG للعدالة المغربية مع تركيز على كتابة الضبط والمواطنة الرقمية.`,
+              fr: `Expériences LegalRAG pour la justice marocaine axées sur les greffiers et la citoyenneté numérique.`
             },
             heroName: {
               ar: `الحسان الغوالي`,
@@ -635,8 +683,8 @@
             heroSubtitle: {
               ar: `مطوّر وباحث في المواطنة الرقمية والعدالة المعرفية.
 أستكشف كيف للذكاء الاصطناعي والبيانات المفتوحة أن تدعم البشر دون أن تحل محلهم،
-لا سيما في سياق العدالة والعمل اليومي لكل منتمي لمنظمة العدالة بالمغرب.`,
-              fr: `<strong>Développeur et chercheur en citoyenneté numérique et justice des connaissances.</strong> J’explore comment l’IA et les données المفتوحة peuvent soutenir les humains sans les remplacer، notamment dans le contexte de la justice marocaine et du travail quotidien des greffiers.`
+لا سيما في سياق العدالة والعمل اليومي لكتابة الضبط في المغرب.`,
+              fr: `<strong>Développeur et chercheur en citoyenneté numérique et justice des connaissances.</strong> J’explore comment l’IA et les données ouvertes peuvent soutenir les humains sans les remplacer, notamment dans le contexte de la justice marocaine et du travail quotidien des greffiers.`
             },
             heroMeta: {
               ar: `بوجدور، العيون-الساقية الحمراء · المغرب · <span>المنارة الرقمية &mdash; تجارب LegalRAG والبيانات المفتوحة للمغاربة.</span>`,
@@ -672,15 +720,15 @@
             },
             aboutPara1: {
               ar: `تجمع منصة <strong>«المنارة الرقمية»</strong> تجارب LegalRAG الخاصة بي، ومسارات البيانات المفتوحة المنظمة، ومحتوى تعليمي حول العدالة والتكنولوجيا والوصول إلى معلومات قانونية واضحة بالعربية والفرنسية.`,
-              fr: `La plateforme « Minaret numérique » rassemble mes expériences LegalRAG، les workflows de données المفتوحة structurés et des contenus pédagogiques sur la justice، la technologie et l’accès à une information juridique claire en arabe et en français.`
+              fr: `La plateforme « Minaret numérique » rassemble mes expériences LegalRAG, des parcours de données ouvertes structurés et des contenus pédagogiques sur la justice, la technologie et l’accès à une information juridique claire en arabe et en français.`
             },
             aboutPara2: {
-              ar: `أركز بشكل خاص على الأدوات التي تساعد <strong>كتبة الضبط</strong> والمواطنين العاديين في الحصول على إجابات موثوقة بلغة يفهمونها فعلاً، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم المشورة القانونية.`,
-              fr: `Je m’intéresse particulièrement aux أدوات qui aident les greffiers et les citoyens ordinaires à الحصول على إجابات موثوقة في لغة يفهمونها، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم المشورة القانونية.`
+              ar: `أركز بشكل خاص على الأدوات التي تساعد <strong>كتابة الضبط</strong> والمواطنين العاديين في الحصول على إجابات موثوقة بلغة يفهمونها فعلاً، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم المشورة القانونية.`,
+              fr: `Je m’intéresse particulièrement aux outils qui aident les greffiers et les citoyens à obtenir des réponses fiables dans une langue qu’ils comprennent, tout en respectant la vie privée, l’éthique et les limites du conseil juridique.`
             },
             aboutPara3: {
               ar: `أعمل بمنهجية هجينة: نماذج محلية (LM Studio، Ollama) مدمجة مع واجهات برمجة سحابية عند الحاجة، مرفوقة بمجاميع قانونية مغربية منسقة بعناية وبيانات رسمية مفتوحة.`,
-              fr: `J’adopte une approche hybride : des modèles locaux (LM Studio, Ollama) complétés par des API cloud quand nécessaire، associés à des corpus juridiques مغربية soigneusement sélectionnés et à des بيانات رسمية مفتوحة.`
+              fr: `J’adopte une approche hybride : des modèles locaux (LM Studio, Ollama) complétés par des API cloud quand nécessaire, associés à des corpus juridiques marocains soigneusement sélectionnés et à des données officielles ouvertes.`
             },
             focusLabel: {
               ar: `مواضيع التركيز`,
@@ -720,7 +768,7 @@
             },
             project1Desc: {
               ar: `مساعد مدعوم بالاسترجاع مركّز على العدالة المغربية: خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`,
-              fr: `Assistant basé sur la récupération centré على العدالة المغربية : خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`
+              fr: `Assistant RAG centré sur la justice marocaine : cartes des tribunaux, procédures (casier judiciaire, divorce, aide juridique), sanctions alternatives et indicateurs de justice issus des données ouvertes.`
             },
             project2Name: {
               ar: `مساحة ملف المنارة الرقمية`,
@@ -732,7 +780,7 @@
             },
             project2Desc: {
               ar: `موقع ملفات بسيط وثابت بالكامل يعتمد على HTML وCSS فقط، ويُنشر عبر GitHub Pages من مجلد <code>/docs</code> ويُدار بواسطة PowerShell وGit.`,
-              fr: `Site de profil minimal et totalmente statique basé sur HTML وCSS uniquement، déployé via GitHub Pages depuis le dossier <code>/docs</code> et mantenu avec PowerShell et Git.`
+              fr: `Site de profil simple et entièrement statique en HTML/CSS, publié via GitHub Pages depuis le dossier <code>/docs</code> et maintenu avec PowerShell et Git.`
             },
             project3Name: {
               ar: `البيانات المفتوحة والصحافة القانونية`,
@@ -740,7 +788,7 @@
             },
             project3Desc: {
               ar: `مقالات رأي وتوضيح حول البيانات المفتوحة والذكاء الاصطناعي والعدالة في المغرب، منشورة في صحف ومدونات إلكترونية، مع تركيز على ثقة الجمهور والعدالة المعرفية.`,
-              fr: `Articles d’opinion et explicatifs sur les données المفتوحة، l’IA et la justice au Maroc، publiés dans des journaux et blogs en ligne، avec un focus sur la confiance du public et la justice des connaissances.`
+              fr: `Articles d’opinion et formats pédagogiques sur les données ouvertes, l’IA et la justice au Maroc, publiés dans la presse et sur des blogs, avec un focus sur la confiance du public et la justice des connaissances.`
             },
             projectTag3: {
               ar: `قصص البيانات`,
@@ -752,7 +800,7 @@
             },
             stackIntro: {
               ar: `أعمل عبر واجهات سطر الأوامر والويب وأدوات الذكاء الاصطناعي لتصميم مساعدات <strong>شفافة، قابلة للتدقيق ومعتمدة على المصادر الرسمية</strong>.`,
-              fr: `Je travaille عبر la ligne de commande، le web et les outils d’IA pour prototyper des assistants <strong>transparents، vérifiables et ancrés dans les sources officielles</strong>.`
+              fr: `Je travaille via la ligne de commande, le web et des outils d’IA pour prototyper des assistants <strong>transparents, vérifiables et ancrés dans les sources officielles</strong>.`
             },
             stackChip1: {
               ar: `PowerShell وسطر الأوامر`,
