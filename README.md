@@ -130,7 +130,7 @@ Développeur et chercheur en citoyenneté numérique et justice informationnelle
 ### 📬 Connect
 
 - GitHub: [@premiernbr](https://github.com/premiernbr)
-- LinkedIn: [EL HASSAN EL GHOUALI](https://www.linkedin.com/in/el-ghouali-el-hassan-hub/)
+- LinkedIn: [الحسان الغوالي](https://www.linkedin.com/in/el-ghouali-el-hassan)
 - فيسبوك: [أصدقاء العالم الافتراضي](https://facebook.com/amielghouali)
 
 > إذا وصلت إلى هنا، فربما يشغلك نفس السؤال: كيف نستخدم الذكاء الاصطناعي والبيانات المفتوحة لصناعة عالم أكثر عدلًا ومعرفةً؟ هذه هي رحلة **EL GHOULALI EL HASSAN HUB**.
