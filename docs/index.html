@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>EL HASSAN EL GHOULALI – Digital Minaret</title>
+  <title>EL HASSAN EL GHOULALI · Digital Minaret</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Basic SEO -->
   <meta name="description"
-        content="Developer & researcher in digital citizenship, AI, open data and legal-tech for Moroccan justice." />
+        content="EL HASSAN EL GHOULALI · Digital Minaret hub – LegalRAG experiments for Moroccan users, open data, and digital citizenship." />
+  <meta property="og:title" content="EL HASSAN EL GHOULALI · Digital Minaret" />
+  <meta property="og:description"
+        content="Legal-tech & open data experiments for Moroccan justice, with a focus on court clerks and knowledge justice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://premiernbr.github.io/premiernbr/" />
 
-  <!-- Simple styling -->
   <style>
     :root {
       --bg: #050816;
-      --card-bg: #0b1020;
-      --accent: #3b82f6;
-      --accent-soft: #1f2937;
-      --text-main: #f9fafb;
+      --bg-alt: #020617;
+      --card: #0f172a;
+      --card-soft: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --accent-strong: #22d3ee;
+      --text-main: #e5e7eb;
       --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --radius-xl: 1.75rem;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
+      --shadow-chip: 0 10px 25px rgba(15, 23, 42, 0.75);
     }
 
     * {
@@ -26,332 +35,508 @@
 
     body {
       margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
-      color: var(--text-main);
-      display: flex;
       min-height: 100vh;
-      justify-content: center;
-      align-items: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, #1d4ed8 0, transparent 50%),
+        radial-gradient(circle at top right, #0f766e 0, transparent 55%),
+        radial-gradient(circle at bottom, #4f46e5 0, transparent 55%),
+        var(--bg);
+      background-attachment: fixed;
     }
 
-    .page {
-      width: 100%;
-      max-width: 960px;
-      padding: 1.5rem;
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
     }
 
-    .card {
-      background: linear-gradient(135deg, #020617, #020617 40%, #0b1120 100%);
-      border-radius: 1.75rem;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.75);
-      border: 1px solid #1f2937;
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 1.5rem;
-        border-radius: 1.25rem;
+    @media (min-width: 768px) {
+      .page-shell {
+        padding: 3rem 1.5rem 3.5rem;
       }
     }
 
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 2rem;
+    .glass {
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.03), transparent 55%),
+                  rgba(15, 23, 42, 0.9);
+      border-radius: 2.25rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      padding: 2rem 1.75rem 2.25rem;
+      backdrop-filter: blur(18px);
+    }
+
+    @media (min-width: 900px) {
+      .glass {
+        padding: 2.5rem 2.5rem 2.75rem;
+      }
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr);
+      grid-row-gap: 2rem;
       align-items: center;
-      margin-bottom: 1.75rem;
-      border-bottom: 1px solid #111827;
-      padding-bottom: 1.5rem;
     }
 
-    .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #38bdf8, #1d4ed8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      color: white;
-      flex-shrink: 0;
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.9fr) minmax(0, 1.1fr);
+        column-gap: 2.5rem;
+      }
     }
 
-    .title-block {
-      flex: 1;
-      min-width: 240px;
-    }
-
-    .name-en {
-      font-size: 1.35rem;
-      letter-spacing: 0.06em;
+    .hero-name {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      letter-spacing: 0.08em;
+      font-weight: 800;
       text-transform: uppercase;
-      font-weight: 700;
+      margin: 0 0 0.5rem;
     }
 
-    .name-ar {
-      font-size: 1.1rem;
+    .hero-name span {
+      color: var(--accent-strong);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
       color: var(--text-muted);
-      margin-top: 0.1rem;
-      direction: rtl;
-      text-align: right;
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .hero-subtitle strong {
+      color: var(--text-main);
       font-weight: 600;
     }
 
-    .tagline {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
+    .hero-meta {
+      margin-top: 0.9rem;
+      font-size: 0.87rem;
       color: var(--text-muted);
     }
 
-    .location {
-      margin-top: 0.25rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .links a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid #1e293b;
-      background: rgba(15, 23, 42, 0.9);
+    .hero-meta span {
       color: var(--text-main);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
-    .links a span {
-      font-size: 0.9rem;
+    .avatar-card {
+      display: flex;
+      justify-content: flex-start;
     }
 
-    .links a:hover {
-      border-color: var(--accent);
-      background: rgba(37, 99, 235, 0.1);
-    }
-
-    .sections {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 900px) {
-      .sections {
-        grid-template-columns: minmax(0, 1fr);
+    @media (min-width: 900px) {
+      .avatar-card {
+        justify-content: center;
       }
     }
 
-    h2 {
-      font-size: 1rem;
-      margin: 0 0 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-    }
-
-    p {
-      margin: 0 0 0.5rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: var(--text-main);
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 1.1rem;
-      list-style: disc;
-      color: var(--text-main);
-    }
-
-    li {
-      margin-bottom: 0.35rem;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .pill-list {
+    .avatar-inner {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .pill {
-      font-size: 0.8rem;
-      padding: 0.25rem 0.6rem;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.4rem 1.3rem 1.6rem;
       border-radius: 999px;
-      background: #020617;
-      border: 1px solid #111827;
+      background: radial-gradient(circle at top, #4f46e5, #0f172a);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      min-width: 215px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar-circle {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: conic-gradient(from 220deg, #22d3ee, #6366f1, #22c55e, #22d3ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.9rem;
+      position: relative;
+    }
+
+    .avatar-circle span {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #0b1120;
+      text-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+    }
+
+    .avatar-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-main);
+    }
+
+    .avatar-chip {
+      margin-top: 0.65rem;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--accent-strong);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      box-shadow: var(--shadow-chip);
+      white-space: nowrap;
+    }
+
+    .avatar-ar {
+      margin-top: 0.45rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      direction: rtl;
+    }
+
+    /* LINKS ROW */
+
+    .links-row {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.86rem;
+      transition: all 0.17s ease-out;
+    }
+
+    .pill-link span.icon {
+      font-size: 1rem;
+    }
+
+    .pill-link:hover {
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+      background: linear-gradient(90deg, rgba(15,23,42,0.98), rgba(15,23,42,0.92));
+    }
+
+    /* LAYOUT: MAIN SECTIONS */
+
+    .sections-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr);
+      gap: 1.8rem;
+      margin-top: 2.2rem;
+    }
+
+    @media (min-width: 980px) {
+      .sections-grid {
+        grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
+      }
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 0.7rem;
+    }
+
+    .section-card {
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.03), transparent 55%),
+                  var(--card);
+      border-radius: 1.6rem;
+      border: 1px solid var(--border-subtle);
+      padding: 1.3rem 1.2rem 1.4rem;
+    }
+
+    @media (min-width: 900px) {
+      .section-card {
+        padding: 1.4rem 1.4rem 1.5rem;
+      }
+    }
+
+    .section-card p {
+      margin: 0 0 0.7rem;
+      font-size: 0.92rem;
+      line-height: 1.7;
       color: var(--text-muted);
     }
 
-    .footer {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid #111827;
-      font-size: 0.8rem;
+    .section-card p strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* PROJECTS */
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.9rem;
+    }
+
+    .project {
+      padding: 0.8rem 0.9rem;
+      border-radius: 1.1rem;
+      background: var(--card-soft);
+      border: 1px solid rgba(30, 64, 175, 0.6);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 0.12rem 0.6rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      white-space: nowrap;
+    }
+
+    .project p {
+      margin: 0;
+      font-size: 0.85rem;
       color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* STACK & TOPICS */
+
+    .stack-chips,
+    .topics-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.45rem;
+      margin-top: 0.25rem;
+    }
+
+    .chip {
+      font-size: 0.8rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .chip.soft {
+      background: rgba(15, 23, 42, 0.75);
+      color: var(--text-muted);
+    }
+
+    .chip-label {
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
       justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="card">
-      <header class="header">
-        <div class="avatar">EH</div>
-        <div class="title-block">
-          <div class="name-en" id="name-en">EL HASSAN EL GHOULALI</div>
-          <div class="name-ar" id="name-ar">الحسان الغوالي</div>
-          <div class="tagline" id="tagline-en">
-            Developer & researcher in digital citizenship and knowledge justice · AI & open data · Legal-tech for Moroccan justice
+  <div class="page-shell">
+    <div class="glass">
+      <!-- HERO -->
+      <header class="hero">
+        <div>
+          <h1 class="hero-name">
+            EL HASSAN <span>EL GHOULALI</span>
+          </h1>
+          <p class="hero-subtitle">
+            <strong>Developer &amp; researcher in digital citizenship and knowledge justice.</strong>
+            I explore how AI &amp; open data can support, not replace, humans &mdash; especially
+            in the context of Moroccan justice and the everyday work of court clerks.
+          </p>
+          <div class="hero-meta">
+            Boujdour, Laâyoune-Sakia El Hamra &middot; Morocco ·
+            <span>Digital Minaret &mdash; LegalRAG &amp; open-data experiments for Moroccan users.</span>
           </div>
-          <div class="location" id="location">
-            Boujdour, Laâyoune-Sakia El Hamra · Morocco
-          </div>
-          <div class="links">
-            <a id="link-github" href="https://github.com/premiernbr" target="_blank" rel="noopener">
-              <span>GitHub</span> @premiernbr
+
+          <div class="links-row">
+            <a class="pill-link" href="https://github.com/premiernbr" target="_blank" rel="noopener">
+              <span class="icon">🐙</span>
+              <span>GitHub · @premiernbr</span>
             </a>
-            <a id="link-linkedin" href="https://www.linkedin.com/in/el-ghouali-el-hassan" target="_blank" rel="noopener">
-              <span>LinkedIn</span> Profile
+            <a class="pill-link" href="https://www.linkedin.com/in/el-ghouali-el-hassan" target="_blank" rel="noopener">
+              <span class="icon">🔗</span>
+              <span>LinkedIn profile</span>
             </a>
-            <a id="link-facebook" href="https://www.facebook.com/amielghouali" target="_blank" rel="noopener">
-              <span>Facebook</span> أصدقاء العالم الافتراضي
+            <!-- TODO: ضع هنا رابط فيسبوك الحقيقي -->
+            <a class="pill-link" href="https://www.facebook.com/amielghouali" target="_blank" rel="noopener">
+              <span class="icon">🌐</span>
+              <span>Facebook · أصدقاء العالم الافتراضي</span>
             </a>
           </div>
         </div>
+
+        <aside class="avatar-card">
+          <div class="avatar-inner">
+            <div class="avatar-circle">
+              <span>EH</span>
+            </div>
+            <div class="avatar-role">
+              Digital citizenship · AI · open data
+            </div>
+            <div class="avatar-chip">
+              Legal-tech for Moroccan justice
+            </div>
+            <div class="avatar-ar">
+              الصمعة الرقمية &mdash; المرشد القانوني (LegalRAG)
+            </div>
+          </div>
+        </aside>
       </header>
 
-      <section class="sections">
-        <article>
-          <h2>About</h2>
-          <p>
-            I explore how AI and open data can support, not replace, humans — especially in the context of Moroccan justice
-            and the everyday work of court clerks.
-          </p>
-          <p>
-            The “Digital Minaret” hub groups together my LegalRAG experiments for Moroccan users, structured open-data workflows,
-            and educational content on justice, technology and access to clear legal information in Arabic and French.
-          </p>
-          <p>
-            Long term, the goal is simple: help people obtain trustworthy answers in a language they actually understand,
-            while respecting privacy, ethics and the limits of legal advice.
-          </p>
+      <!-- MAIN SECTIONS -->
+      <main class="sections-grid">
+        <!-- ABOUT -->
+        <section>
+          <h2 class="section-title">About</h2>
+          <div class="section-card">
+            <p>
+              The <strong>“Digital Minaret”</strong> hub groups together my LegalRAG experiments,
+              structured open-data workflows, and educational content on justice, technology and access
+              to clear legal information in Arabic and French.
+            </p>
+            <p>
+              I’m especially interested in tools that help <strong>court clerks</strong> and ordinary citizens
+              obtain trustworthy answers in a language they actually understand, while respecting privacy,
+              ethics and the limits of legal advice.
+            </p>
+            <p>
+              I work with a hybrid approach: local models (LM Studio, Ollama) plus cloud APIs when needed,
+              combined with carefully curated Moroccan legal corpora and official open data.
+            </p>
 
-          <h2>Focus topics</h2>
-          <div class="pill-list" id="focus-topics">
-            <!-- Filled from profile.json -->
+            <div class="chip-label">Focus topics</div>
+            <div class="topics-chips">
+              <span class="chip">LegalRAG for Moroccan users</span>
+              <span class="chip">Court clerks &amp; justice workflows</span>
+              <span class="chip">Open data &amp; transparency</span>
+              <span class="chip">Digital citizenship &amp; education</span>
+              <span class="chip soft">Arabic &amp; French legal UX</span>
+            </div>
           </div>
-        </article>
+        </section>
 
-        <aside>
-          <h2>Projects</h2>
-          <ul id="projects">
-            <!-- Filled from profile.json -->
-          </ul>
-        </aside>
+        <!-- PROJECTS -->
+        <section>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-card">
+            <div class="projects-list">
+              <article class="project">
+                <div class="project-header">
+                  <div class="project-name">LegalRAG / المرشد القانوني</div>
+                  <span class="project-tag">RAG · legal-tech</span>
+                </div>
+                <p>
+                  Retrieval-augmented assistant focused on Moroccan justice: court maps, procedures
+                  (casier judiciaire, divorce, legal aid), alternative penalties, and open-data views of
+                  justice indicators.
+                </p>
+              </article>
+
+              <article class="project">
+                <div class="project-header">
+                  <div class="project-name">Digital Minaret profile workspace</div>
+                  <span class="project-tag">GitHub Pages</span>
+                </div>
+                <p>
+                  A minimal, fully static profile site powered by HTML &amp; CSS only, deployed via GitHub
+                  Pages from the <code>/docs</code> folder and maintained with PowerShell &amp; Git.
+                </p>
+              </article>
+
+              <article class="project">
+                <div class="project-header">
+                  <div class="project-name">Open data &amp; legal journalism</div>
+                  <span class="project-tag">Data stories</span>
+                </div>
+                <p>
+                  Opinion pieces and explanatory articles on open data, AI and justice in Morocco,
+                  published in online newspapers and blogs, with a focus on public trust and knowledge justice.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- STACK & THEMES -->
+      <section style="margin-top: 1.8rem;">
+        <h2 class="section-title">Stack &amp; tools</h2>
+        <div class="section-card">
+          <p style="margin-bottom:0.6rem;">
+            I work across the command line, web and AI tooling to prototype assistants that are
+            <strong>transparent, auditable and grounded in official sources</strong>.
+          </p>
+          <div class="stack-chips">
+            <span class="chip">PowerShell &amp; CLI</span>
+            <span class="chip">Python · FastAPI</span>
+            <span class="chip">JavaScript · HTML · CSS</span>
+            <span class="chip">Git &amp; GitHub Actions</span>
+            <span class="chip">RAG · embeddings</span>
+            <span class="chip">LM Studio · Ollama</span>
+            <span class="chip soft">Open data (data.gov.ma, MoJ)</span>
+          </div>
+        </div>
       </section>
 
-      <footer class="footer">
-        <span>Digital Minaret · LegalRAG experiments for Moroccan users.</span>
-        <span>Last updated via GitHub · premiernbr</span>
+      <!-- FOOTER -->
+      <footer>
+        <div>
+          Digital Minaret · LegalRAG experiments for Moroccan users.
+        </div>
+        <div>
+          Last updated via <a href="https://github.com/premiernbr/premiernbr" target="_blank" rel="noopener">GitHub Pages</a>
+          · @premiernbr
+        </div>
       </footer>
-    </section>
-  </main>
-
-  <script>
-    async function loadProfile() {
-      try {
-        const response = await fetch("../profile.json");
-        if (!response.ok) {
-          console.warn("Could not load profile.json:", response.status);
-          return;
-        }
-        const profile = await response.json();
-
-        // Names
-        if (profile.full_name_en) {
-          document.getElementById("name-en").textContent = profile.full_name_en;
-        }
-        if (profile.full_name_ar) {
-          document.getElementById("name-ar").textContent = profile.full_name_ar;
-        }
-
-        // Tagline
-        if (profile.tagline_en) {
-          document.getElementById("tagline-en").textContent = profile.tagline_en;
-        }
-
-        // Location
-        if (profile.location) {
-          const loc = profile.location;
-          const locText = [
-            loc.city,
-            loc.region,
-            loc.country_en
-          ].filter(Boolean).join(", ");
-          document.getElementById("location").textContent = locText;
-        }
-
-        // Links
-        if (profile.links) {
-          if (profile.links.github) {
-            document.getElementById("link-github").href = profile.links.github;
-          }
-          if (profile.links.linkedin) {
-            document.getElementById("link-linkedin").href = profile.links.linkedin;
-          }
-          if (profile.links.facebook) {
-            document.getElementById("link-facebook").href = profile.links.facebook;
-          }
-        }
-
-        // Focus topics
-        const topicsContainer = document.getElementById("focus-topics");
-        topicsContainer.innerHTML = "";
-        if (Array.isArray(profile.focus_topics)) {
-          profile.focus_topics.forEach(topic => {
-            const span = document.createElement("span");
-            span.className = "pill";
-            span.textContent = topic;
-            topicsContainer.appendChild(span);
-          });
-        }
-
-        // Projects
-        const projectsContainer = document.getElementById("projects");
-        projectsContainer.innerHTML = "";
-        if (Array.isArray(profile.projects)) {
-          profile.projects.forEach(p => {
-            const li = document.createElement("li");
-            li.innerHTML = `<strong>${p.name_en}</strong><br /><span style="color:#9ca3af;font-size:0.85rem;">${p.summary_en}</span>`;
-            projectsContainer.appendChild(li);
-          });
-        }
-      } catch (err) {
-        console.error("Error loading profile.json", err);
-      }
-    }
-
-    loadProfile();
-  </script>
+    </div>
+  </div>
 </body>
 </html>
