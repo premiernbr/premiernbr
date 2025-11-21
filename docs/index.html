@@ -474,7 +474,7 @@
           <div class="links-row">
             <a class="pill-link" href="https://github.com/premiernbr" target="_blank" rel="noopener">
               <span class="icon">🐙</span>
-              <span>GitHub · @premiernbr</span>
+              <span data-i18n="linkGithub">GitHub · @premiernbr</span>
             </a>
             <a class="pill-link" href="https://www.linkedin.com/in/el-ghouali-el-hassan" target="_blank" rel="noopener">
               <span class="icon">🔗</span>
@@ -492,13 +492,13 @@
             <div class="hero-orb">
               <img src="avatar.jpg" alt="El Hassan El Ghouali" />
             </div>
-            <div class="avatar-role">
+            <div class="avatar-role" data-i18n="avatarRole">
               المواطنة الرقمية · الذكاء الاصطناعي · البيانات المفتوحة
             </div>
-            <div class="avatar-chip">
+            <div class="avatar-chip" data-i18n="avatarChip">
               تقنيات قانونية من أجل العدالة المغربية
             </div>
-            <div class="avatar-ar" lang="ar">
+            <div class="avatar-ar" lang="ar" data-i18n="avatarTagline">
               الصمعة الرقمية &mdash; المرشد القانوني (LegalRAG)
             </div>
           </div>
@@ -541,23 +541,23 @@
           <h2 class="section-title" data-i18n="projectsTitle">المشاريع</h2>
           <div class="section-card">
             <div class="projects-list">
-              <article class="project">
-                <div class="project-header">
-                  <div class="project-name">LegalRAG / المرشد القانوني</div>
-                  <span class="project-tag">RAG · legal-tech</span>
-                </div>
-                <p data-i18n="project1Desc">
+            <article class="project">
+              <div class="project-header">
+                <div class="project-name" data-i18n="project1Name">LegalRAG / المرشد القانوني</div>
+                <span class="project-tag" data-i18n="projectTag1">RAG · legal-tech</span>
+              </div>
+              <p data-i18n="project1Desc">
                   مساعد مدعوم بالاسترجاع مركّز على العدالة المغربية: خرائط المحاكم، الإجراءات
                   (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة
                   من خلال البيانات المفتوحة.
                 </p>
               </article>
 
-              <article class="project">
-                <div class="project-header">
-                  <div class="project-name" data-i18n="project2Name">مساحة ملف المنارة الرقمية</div>
-                  <span class="project-tag">GitHub Pages</span>
-                </div>
+            <article class="project">
+              <div class="project-header">
+                <div class="project-name" data-i18n="project2Name">مساحة ملف المنارة الرقمية</div>
+                <span class="project-tag" data-i18n="projectTag2">GitHub Pages</span>
+              </div>
                 <p data-i18n="project2Desc">
                   موقع ملفات بسيط وثابت بالكامل يعتمد على HTML وCSS فقط، ويُنشر عبر GitHub Pages من مجلد
                   <code>/docs</code> ويُدار بواسطة PowerShell وGit.
@@ -642,6 +642,22 @@
               ar: `بوجدور، العيون-الساقية الحمراء · المغرب · <span>المنارة الرقمية &mdash; تجارب LegalRAG والبيانات المفتوحة للمغاربة.</span>`,
               fr: `Boujdour, Laâyoune-Sakia El Hamra · Maroc · <span>Minaret numérique &mdash; expériences LegalRAG et données ouvertes pour les Marocains.</span>`
             },
+            avatarRole: {
+              ar: `المواطنة الرقمية · الذكاء الاصطناعي · البيانات المفتوحة`,
+              fr: `Citoyenneté numérique · IA · données ouvertes`
+            },
+            avatarChip: {
+              ar: `تقنيات قانونية من أجل العدالة المغربية`,
+              fr: `Techniques juridiques pour une justice marocaine`
+            },
+            avatarTagline: {
+              ar: `الصمعة الرقمية &mdash; المرشد القانوني (LegalRAG)`,
+              fr: `Minaret numérique &mdash; guide juridique (LegalRAG)`
+            },
+            linkGithub: {
+              ar: `GitHub · @premiernbr`,
+              fr: `GitHub · profil @premiernbr`
+            },
             linkLinkedin: {
               ar: `ملف لينكدإن`,
               fr: `Profil LinkedIn`
@@ -694,6 +710,14 @@
               ar: `المشاريع`,
               fr: `Projets`
             },
+            project1Name: {
+              ar: `LegalRAG / المرشد القانوني`,
+              fr: `LegalRAG / guide juridique`
+            },
+            projectTag1: {
+              ar: `RAG · legal-tech`,
+              fr: `RAG · tech juridique`
+            },
             project1Desc: {
               ar: `مساعد مدعوم بالاسترجاع مركّز على العدالة المغربية: خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`,
               fr: `Assistant basé sur la récupération centré على العدالة المغربية : خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`
@@ -701,6 +725,10 @@
             project2Name: {
               ar: `مساحة ملف المنارة الرقمية`,
               fr: `Espace profil Minaret numérique`
+            },
+            projectTag2: {
+              ar: `GitHub Pages`,
+              fr: `Pages GitHub`
             },
             project2Desc: {
               ar: `موقع ملفات بسيط وثابت بالكامل يعتمد على HTML وCSS فقط، ويُنشر عبر GitHub Pages من مجلد <code>/docs</code> ويُدار بواسطة PowerShell وGit.`,
