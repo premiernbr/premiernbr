@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>EL HASSAN EL GHOULALI · Digital Minaret</title>
+  <title>الحسن الغولالي · المنارة الرقمية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="EL HASSAN EL GHOULALI · Digital Minaret hub – LegalRAG experiments for Moroccan users, open data, and digital citizenship." />
-  <meta property="og:title" content="EL HASSAN EL GHOULALI · Digital Minaret" />
+        content="الحسن الغولالي · المنارة الرقمية – تجارب LegalRAG للمغاربة، البيانات المفتوحة، المواطنة الرقمية." />
+  <meta property="og:title" content="الحسن الغولالي · المنارة الرقمية" />
   <meta property="og:description"
-        content="Legal-tech & open data experiments for Moroccan justice, with a focus on court clerks and knowledge justice." />
+        content="تجارب تقنية القانون المفتوح والذكاء الاصطناعي للعدالة في المغرب مع اهتمام بكتبة الضبط والعدالة المعرفية." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://premiernbr.github.io/premiernbr/" />
 
@@ -36,7 +36,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Space Grotesk", "Inter", "Segoe UI", "Noto Sans Arabic", sans-serif;
       color: var(--text-main);
       background:
         radial-gradient(circle at top left, #1d4ed8 0, transparent 50%),
@@ -65,6 +65,7 @@
       border: 1px solid rgba(148, 163, 184, 0.25);
       box-shadow: var(--shadow-soft);
       padding: 2rem 1.75rem 2.25rem;
+      -webkit-backdrop-filter: blur(18px);
       backdrop-filter: blur(18px);
     }
 
@@ -96,6 +97,10 @@
       font-weight: 800;
       text-transform: uppercase;
       margin: 0 0 0.5rem;
+    }
+
+    :root[dir="rtl"] .hero-name {
+      text-transform: none;
     }
 
     .hero-name span {
@@ -135,6 +140,26 @@
       }
     }
 
+    .hero-orb {
+      width: 132px;
+      height: 132px;
+      border-radius: 999px;
+      border: 2px solid var(--accent);
+      overflow: hidden;
+      box-shadow: var(--shadow-chip);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card-soft);
+    }
+
+    .hero-orb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .avatar-inner {
       display: flex;
       flex-direction: column;
@@ -147,25 +172,6 @@
       min-width: 215px;
       position: relative;
       overflow: hidden;
-    }
-
-    .avatar-circle {
-      width: 86px;
-      height: 86px;
-      border-radius: 50%;
-      background: conic-gradient(from 220deg, #22d3ee, #6366f1, #22c55e, #22d3ee);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.9rem;
-      position: relative;
-    }
-
-    .avatar-circle span {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: #0b1120;
-      text-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
     }
 
     .avatar-role {
@@ -201,6 +207,38 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .lang-btn {
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .lang-btn.is-active {
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.75);
+    }
+
+    .lang-btn:focus-visible,
+    .pill-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-color: var(--accent);
     }
 
     .pill-link {
@@ -257,6 +295,10 @@
       border-radius: 1.6rem;
       border: 1px solid var(--border-subtle);
       padding: 1.3rem 1.2rem 1.4rem;
+    }
+
+    .section-lede {
+      margin-bottom: 0.6rem;
     }
 
     @media (min-width: 900px) {
@@ -353,6 +395,33 @@
       color: var(--text-muted);
     }
 
+    .stack-section {
+      margin-top: 1.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 1.5rem;
+      }
+
+      .name-row {
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        font-size: 0.92rem;
+      }
+
+      .avatar-card {
+        justify-content: center;
+      }
+
+      .hero-orb {
+        margin-inline: auto;
+      }
+    }
+
     /* FOOTER */
 
     footer {
@@ -380,20 +449,26 @@
 <body>
   <div class="page-shell">
     <div class="glass">
+      <div class="lang-switch" role="group" aria-label="Language switch / تغيير اللغة">
+        <button class="lang-btn is-active" type="button" data-lang="ar">العربية</button>
+        <button class="lang-btn" type="button" data-lang="fr">Français</button>
+      </div>
       <!-- HERO -->
       <header class="hero">
         <div>
-          <h1 class="hero-name">
-            EL HASSAN <span>EL GHOULALI</span>
-          </h1>
-          <p class="hero-subtitle">
-            <strong>Developer &amp; researcher in digital citizenship and knowledge justice.</strong>
-            I explore how AI &amp; open data can support, not replace, humans &mdash; especially
-            in the context of Moroccan justice and the everyday work of court clerks.
+          <div class="name-row">
+            <h1 class="hero-name" data-i18n="heroName">
+              الحسان الغوالي
+            </h1>
+          </div>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            <strong>مطور وباحث في المواطنة الرقمية والعدالة المعرفية.</strong>
+            أستكشف كيف يمكن للذكاء الاصطناعي والبيانات المفتوحة أن تدعم البشر دون أن تحل محلهم،
+            لا سيما في سياق العدالة المغربية والعمل اليومي لكتبة الضبط.
           </p>
-          <div class="hero-meta">
-            Boujdour, Laâyoune-Sakia El Hamra &middot; Morocco ·
-            <span>Digital Minaret &mdash; LegalRAG &amp; open-data experiments for Moroccan users.</span>
+          <div class="hero-meta" data-i18n="heroMeta">
+            بوجدور، العيون-الساقية الحمراء · المغرب ·
+            <span>المنارة الرقمية &mdash; تجارب LegalRAG والبيانات المفتوحة للمغاربة.</span>
           </div>
 
           <div class="links-row">
@@ -403,28 +478,27 @@
             </a>
             <a class="pill-link" href="https://www.linkedin.com/in/el-ghouali-el-hassan" target="_blank" rel="noopener">
               <span class="icon">🔗</span>
-              <span>LinkedIn profile</span>
+              <span data-i18n="linkLinkedin">ملف لينكدإن</span>
             </a>
-            <!-- TODO: ضع هنا رابط فيسبوك الحقيقي -->
             <a class="pill-link" href="https://www.facebook.com/amielghouali" target="_blank" rel="noopener">
               <span class="icon">🌐</span>
-              <span>Facebook · أصدقاء العالم الافتراضي</span>
+              <span data-i18n="linkFacebook">فيسبوك · الأصدقاء في العالم الافتراضي</span>
             </a>
           </div>
         </div>
 
         <aside class="avatar-card">
           <div class="avatar-inner">
-            <div class="avatar-circle">
-              <span>EH</span>
+            <div class="hero-orb">
+              <img src="avatar.jpg" alt="El Hassan El Ghouali" />
             </div>
             <div class="avatar-role">
-              Digital citizenship · AI · open data
+              المواطنة الرقمية · الذكاء الاصطناعي · البيانات المفتوحة
             </div>
             <div class="avatar-chip">
-              Legal-tech for Moroccan justice
+              تقنيات قانونية من أجل العدالة المغربية
             </div>
-            <div class="avatar-ar">
+            <div class="avatar-ar" lang="ar">
               الصمعة الرقمية &mdash; المرشد القانوني (LegalRAG)
             </div>
           </div>
@@ -435,37 +509,36 @@
       <main class="sections-grid">
         <!-- ABOUT -->
         <section>
-          <h2 class="section-title">About</h2>
+          <h2 class="section-title" data-i18n="aboutTitle">حول</h2>
           <div class="section-card">
-            <p>
-              The <strong>“Digital Minaret”</strong> hub groups together my LegalRAG experiments,
-              structured open-data workflows, and educational content on justice, technology and access
-              to clear legal information in Arabic and French.
+            <p data-i18n="aboutPara1">
+              تجمع منصة <strong>«المنارة الرقمية»</strong> تجارب LegalRAG الخاصة بي، ومسارات البيانات المفتوحة المنظمة،
+              ومحتوى تعليمي حول العدالة والتكنولوجيا والوصول إلى معلومات قانونية واضحة بالعربية والفرنسية.
             </p>
-            <p>
-              I’m especially interested in tools that help <strong>court clerks</strong> and ordinary citizens
-              obtain trustworthy answers in a language they actually understand, while respecting privacy,
-              ethics and the limits of legal advice.
+            <p data-i18n="aboutPara2">
+              أركز بشكل خاص على الأدوات التي تساعد <strong>كتبة الضبط</strong> والمواطنين العاديين
+              في الحصول على إجابات موثوقة بلغة يفهمونها فعلاً، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم
+              المشورة القانونية.
             </p>
-            <p>
-              I work with a hybrid approach: local models (LM Studio, Ollama) plus cloud APIs when needed,
-              combined with carefully curated Moroccan legal corpora and official open data.
+            <p data-i18n="aboutPara3">
+              أعمل بمنهجية هجينة: نماذج محلية (LM Studio، Ollama) مدمجة مع واجهات برمجة سحابية عند الحاجة،
+              مرفوقة بمجاميع قانونية مغربية منسقة بعناية وبيانات رسمية مفتوحة.
             </p>
 
-            <div class="chip-label">Focus topics</div>
+            <div class="chip-label" data-i18n="focusLabel">مواضيع التركيز</div>
             <div class="topics-chips">
-              <span class="chip">LegalRAG for Moroccan users</span>
-              <span class="chip">Court clerks &amp; justice workflows</span>
-              <span class="chip">Open data &amp; transparency</span>
-              <span class="chip">Digital citizenship &amp; education</span>
-              <span class="chip soft">Arabic &amp; French legal UX</span>
+              <span class="chip" data-i18n="focusChip1">LegalRAG للمغاربة</span>
+              <span class="chip" data-i18n="focusChip2">كتابة الضبط ومسارات العدالة</span>
+              <span class="chip" data-i18n="focusChip3">البيانات المفتوحة والشفافية</span>
+              <span class="chip" data-i18n="focusChip4">المواطنة الرقمية والتعليم</span>
+              <span class="chip soft" data-i18n="focusChip5">تجربة مستخدم قانونية بالعربية والفرنسية</span>
             </div>
           </div>
         </section>
 
         <!-- PROJECTS -->
         <section>
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title" data-i18n="projectsTitle">المشاريع</h2>
           <div class="section-card">
             <div class="projects-list">
               <article class="project">
@@ -473,32 +546,32 @@
                   <div class="project-name">LegalRAG / المرشد القانوني</div>
                   <span class="project-tag">RAG · legal-tech</span>
                 </div>
-                <p>
-                  Retrieval-augmented assistant focused on Moroccan justice: court maps, procedures
-                  (casier judiciaire, divorce, legal aid), alternative penalties, and open-data views of
-                  justice indicators.
+                <p data-i18n="project1Desc">
+                  مساعد مدعوم بالاسترجاع مركّز على العدالة المغربية: خرائط المحاكم، الإجراءات
+                  (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة
+                  من خلال البيانات المفتوحة.
                 </p>
               </article>
 
               <article class="project">
                 <div class="project-header">
-                  <div class="project-name">Digital Minaret profile workspace</div>
+                  <div class="project-name" data-i18n="project2Name">مساحة ملف المنارة الرقمية</div>
                   <span class="project-tag">GitHub Pages</span>
                 </div>
-                <p>
-                  A minimal, fully static profile site powered by HTML &amp; CSS only, deployed via GitHub
-                  Pages from the <code>/docs</code> folder and maintained with PowerShell &amp; Git.
+                <p data-i18n="project2Desc">
+                  موقع ملفات بسيط وثابت بالكامل يعتمد على HTML وCSS فقط، ويُنشر عبر GitHub Pages من مجلد
+                  <code>/docs</code> ويُدار بواسطة PowerShell وGit.
                 </p>
               </article>
 
               <article class="project">
                 <div class="project-header">
-                  <div class="project-name">Open data &amp; legal journalism</div>
-                  <span class="project-tag">Data stories</span>
+                  <div class="project-name" data-i18n="project3Name">البيانات المفتوحة والصحافة القانونية</div>
+                  <span class="project-tag" data-i18n="projectTag3">Data stories</span>
                 </div>
-                <p>
-                  Opinion pieces and explanatory articles on open data, AI and justice in Morocco,
-                  published in online newspapers and blogs, with a focus on public trust and knowledge justice.
+                <p data-i18n="project3Desc">
+                  مقالات رأي وتوضيح حول البيانات المفتوحة والذكاء الاصطناعي والعدالة في المغرب،
+                  منشورة في صحف ومدونات إلكترونية، مع تركيز على ثقة الجمهور والعدالة المعرفية.
                 </p>
               </article>
             </div>
@@ -507,35 +580,235 @@
       </main>
 
       <!-- STACK & THEMES -->
-      <section style="margin-top: 1.8rem;">
-        <h2 class="section-title">Stack &amp; tools</h2>
-        <div class="section-card">
-          <p style="margin-bottom:0.6rem;">
-            I work across the command line, web and AI tooling to prototype assistants that are
-            <strong>transparent, auditable and grounded in official sources</strong>.
-          </p>
-          <div class="stack-chips">
-            <span class="chip">PowerShell &amp; CLI</span>
-            <span class="chip">Python · FastAPI</span>
-            <span class="chip">JavaScript · HTML · CSS</span>
-            <span class="chip">Git &amp; GitHub Actions</span>
-            <span class="chip">RAG · embeddings</span>
-            <span class="chip">LM Studio · Ollama</span>
-            <span class="chip soft">Open data (data.gov.ma, MoJ)</span>
+      <section class="stack-section">
+        <h2 class="section-title" data-i18n="stackTitle">البنية والأدوات</h2>
+          <div class="section-card">
+            <p class="section-lede" data-i18n="stackIntro">
+              أعمل عبر واجهات سطر الأوامر والويب وأدوات الذكاء الاصطناعي لتصميم مساعدات
+              <strong>شفافة، قابلة للتدقيق ومعتمدة على المصادر الرسمية</strong>.
+            </p>
+            <div class="stack-chips">
+              <span class="chip" data-i18n="stackChip1">PowerShell وسطر الأوامر</span>
+              <span class="chip" data-i18n="stackChip2">Python · FastAPI</span>
+              <span class="chip" data-i18n="stackChip3">JavaScript · HTML · CSS</span>
+              <span class="chip" data-i18n="stackChip4">Git وGitHub Actions</span>
+              <span class="chip" data-i18n="stackChip5">RAG · النماذج المتجذرة</span>
+              <span class="chip" data-i18n="stackChip6">LM Studio · Ollama</span>
+              <span class="chip soft" data-i18n="stackChip7">البيانات المفتوحة (data.gov.ma، وزارة العدل)</span>
+            </div>
           </div>
-        </div>
       </section>
 
       <!-- FOOTER -->
       <footer>
-        <div>
-          Digital Minaret · LegalRAG experiments for Moroccan users.
+        <div data-i18n="footerLine1">
+          المنارة الرقمية · تجارب LegalRAG للمغاربة.
         </div>
-        <div>
-          Last updated via <a href="https://github.com/premiernbr/premiernbr" target="_blank" rel="noopener">GitHub Pages</a>
+        <div data-i18n="footerLine2">
+          آخر تحديث عبر <a href="https://github.com/premiernbr/premiernbr" target="_blank" rel="noopener">GitHub Pages</a>
           · @premiernbr
         </div>
       </footer>
+      <script>
+        (function() {
+          const translations = {
+            pageTitle: {
+              ar: `الحسن الغولالي · المنارة الرقمية`,
+              fr: `EL HASSAN EL GHOULALI · Digital Minaret`
+            },
+            pageDescription: {
+              ar: `الحسن الغولالي · المنارة الرقمية – تجارب LegalRAG للمغاربة، البيانات المفتوحة والمواطنة الرقمية.`,
+              fr: `EL HASSAN EL GHOULALI · Minaret numérique – expériences LegalRAG, données ouvertes et citoyenneté numérique pour le Maroc.`
+            },
+            ogTitle: {
+              ar: `الحسن الغولالي · المنارة الرقمية`,
+              fr: `EL HASSAN EL GHOULALI · Digital Minaret`
+            },
+            ogDescription: {
+              ar: `تجارب LegalRAG للعدالة المغربية مع تركيز على كتبة الضبط والمواطنة الرقمية.`,
+              fr: `Expériences LegalRAG pour la justice marocaine axées sur les greffiers et la citoyenneté الرقمية.`
+            },
+            heroName: {
+              ar: `الحسان الغوالي`,
+              fr: `EL HASSAN <span>EL GHOULALI</span>`
+            },
+            heroSubtitle: {
+              ar: `مطوّر وباحث في المواطنة الرقمية والعدالة المعرفية.
+أستكشف كيف للذكاء الاصطناعي والبيانات المفتوحة أن تدعم البشر دون أن تحل محلهم،
+لا سيما في سياق العدالة والعمل اليومي لكل منتمي لمنظمة العدالة بالمغرب.`,
+              fr: `<strong>Développeur et chercheur en citoyenneté numérique et justice des connaissances.</strong> J’explore comment l’IA et les données المفتوحة peuvent soutenir les humains sans les remplacer، notamment dans le contexte de la justice marocaine et du travail quotidien des greffiers.`
+            },
+            heroMeta: {
+              ar: `بوجدور، العيون-الساقية الحمراء · المغرب · <span>المنارة الرقمية &mdash; تجارب LegalRAG والبيانات المفتوحة للمغاربة.</span>`,
+              fr: `Boujdour, Laâyoune-Sakia El Hamra · Maroc · <span>Minaret numérique &mdash; expériences LegalRAG et données ouvertes pour les Marocains.</span>`
+            },
+            linkLinkedin: {
+              ar: `ملف لينكدإن`,
+              fr: `Profil LinkedIn`
+            },
+            linkFacebook: {
+              ar: `فيسبوك · الأصدقاء في العالم الافتراضي`,
+              fr: `Facebook · amis du monde virtuel`
+            },
+            aboutTitle: {
+              ar: `حول`,
+              fr: `À propos`
+            },
+            aboutPara1: {
+              ar: `تجمع منصة <strong>«المنارة الرقمية»</strong> تجارب LegalRAG الخاصة بي، ومسارات البيانات المفتوحة المنظمة، ومحتوى تعليمي حول العدالة والتكنولوجيا والوصول إلى معلومات قانونية واضحة بالعربية والفرنسية.`,
+              fr: `La plateforme « Minaret numérique » rassemble mes expériences LegalRAG، les workflows de données المفتوحة structurés et des contenus pédagogiques sur la justice، la technologie et l’accès à une information juridique claire en arabe et en français.`
+            },
+            aboutPara2: {
+              ar: `أركز بشكل خاص على الأدوات التي تساعد <strong>كتبة الضبط</strong> والمواطنين العاديين في الحصول على إجابات موثوقة بلغة يفهمونها فعلاً، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم المشورة القانونية.`,
+              fr: `Je m’intéresse particulièrement aux أدوات qui aident les greffiers et les citoyens ordinaires à الحصول على إجابات موثوقة في لغة يفهمونها، مع احترام الخصوصية، والأخلاقيات، وحدود تقديم المشورة القانونية.`
+            },
+            aboutPara3: {
+              ar: `أعمل بمنهجية هجينة: نماذج محلية (LM Studio، Ollama) مدمجة مع واجهات برمجة سحابية عند الحاجة، مرفوقة بمجاميع قانونية مغربية منسقة بعناية وبيانات رسمية مفتوحة.`,
+              fr: `J’adopte une approche hybride : des modèles locaux (LM Studio, Ollama) complétés par des API cloud quand nécessaire، associés à des corpus juridiques مغربية soigneusement sélectionnés et à des بيانات رسمية مفتوحة.`
+            },
+            focusLabel: {
+              ar: `مواضيع التركيز`,
+              fr: `Thèmes principaux`
+            },
+            focusChip1: {
+              ar: `LegalRAG للمغاربة`,
+              fr: `LegalRAG pour les Marocains`
+            },
+            focusChip2: {
+              ar: `كتابة الضبط ومسارات العدالة`,
+              fr: `Greffiers et parcours judiciaires`
+            },
+            focusChip3: {
+              ar: `البيانات المفتوحة والشفافية`,
+              fr: `Données ouvertes et transparence`
+            },
+            focusChip4: {
+              ar: `المواطنة الرقمية والتعليم`,
+              fr: `Citoyenneté numérique et éducation`
+            },
+            focusChip5: {
+              ar: `تجربة مستخدم قانونية بالعربية والفرنسية`,
+              fr: `Expérience utilisateur juridique en arabe et en français`
+            },
+            projectsTitle: {
+              ar: `المشاريع`,
+              fr: `Projets`
+            },
+            project1Desc: {
+              ar: `مساعد مدعوم بالاسترجاع مركّز على العدالة المغربية: خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`,
+              fr: `Assistant basé sur la récupération centré على العدالة المغربية : خرائط المحاكم، الإجراءات (السجل العدلي، الطلاق، المساعدة القانونية)، العقوبات البديلة، وعروض لمؤشرات العدالة من خلال البيانات المفتوحة.`
+            },
+            project2Name: {
+              ar: `مساحة ملف المنارة الرقمية`,
+              fr: `Espace profil Minaret numérique`
+            },
+            project2Desc: {
+              ar: `موقع ملفات بسيط وثابت بالكامل يعتمد على HTML وCSS فقط، ويُنشر عبر GitHub Pages من مجلد <code>/docs</code> ويُدار بواسطة PowerShell وGit.`,
+              fr: `Site de profil minimal et totalmente statique basé sur HTML وCSS uniquement، déployé via GitHub Pages depuis le dossier <code>/docs</code> et mantenu avec PowerShell et Git.`
+            },
+            project3Name: {
+              ar: `البيانات المفتوحة والصحافة القانونية`,
+              fr: `Données ouvertes et journalisme juridique`
+            },
+            project3Desc: {
+              ar: `مقالات رأي وتوضيح حول البيانات المفتوحة والذكاء الاصطناعي والعدالة في المغرب، منشورة في صحف ومدونات إلكترونية، مع تركيز على ثقة الجمهور والعدالة المعرفية.`,
+              fr: `Articles d’opinion et explicatifs sur les données المفتوحة، l’IA et la justice au Maroc، publiés dans des journaux et blogs en ligne، avec un focus sur la confiance du public et la justice des connaissances.`
+            },
+            projectTag3: {
+              ar: `قصص البيانات`,
+              fr: `Histoires de données`
+            },
+            stackTitle: {
+              ar: `البنية والأدوات`,
+              fr: `Architecture et outils`
+            },
+            stackIntro: {
+              ar: `أعمل عبر واجهات سطر الأوامر والويب وأدوات الذكاء الاصطناعي لتصميم مساعدات <strong>شفافة، قابلة للتدقيق ومعتمدة على المصادر الرسمية</strong>.`,
+              fr: `Je travaille عبر la ligne de commande، le web et les outils d’IA pour prototyper des assistants <strong>transparents، vérifiables et ancrés dans les sources officielles</strong>.`
+            },
+            stackChip1: {
+              ar: `PowerShell وسطر الأوامر`,
+              fr: `PowerShell et CLI`
+            },
+            stackChip2: {
+              ar: `Python · FastAPI`,
+              fr: `Python · FastAPI`
+            },
+            stackChip3: {
+              ar: `JavaScript · HTML · CSS`,
+              fr: `JavaScript · HTML · CSS`
+            },
+            stackChip4: {
+              ar: `Git وGitHub Actions`,
+              fr: `Git et GitHub Actions`
+            },
+            stackChip5: {
+              ar: `RAG · النماذج المتجذرة`,
+              fr: `RAG · embeddings`
+            },
+            stackChip6: {
+              ar: `LM Studio · Ollama`,
+              fr: `LM Studio · Ollama`
+            },
+            stackChip7: {
+              ar: `البيانات المفتوحة (data.gov.ma، وزارة العدل)`,
+              fr: `Données ouvertes (data.gov.ma, ministère de la Justice)`
+            },
+            footerLine1: {
+              ar: `المنارة الرقمية · تجارب LegalRAG للمغاربة.`,
+              fr: `Minaret numérique · expériences LegalRAG pour les Marocains.`
+            },
+            footerLine2: {
+              ar: `آخر تحديث عبر <a href="https://github.com/premiernbr/premiernbr" target="_blank" rel="noopener">GitHub Pages</a> · @premiernbr`,
+              fr: `Dernière mise à jour via <a href="https://github.com/premiernbr/premiernbr" target="_blank" rel="noopener">GitHub Pages</a> · @premiernbr`
+            }
+          };
+
+          const metaDescription = document.querySelector("meta[name=\"description\"]");
+          const ogTitleTag = document.querySelector("meta[property=\"og:title\"]");
+          const ogDescriptionTag = document.querySelector("meta[property=\"og:description\"]");
+          const metaKeys = new Set(["pageTitle", "pageDescription", "ogTitle", "ogDescription"]);
+
+          const setLanguage = (lang) => {
+            const root = document.documentElement;
+            root.lang = lang;
+            root.dir = lang === "ar" ? "rtl" : "ltr";
+            document.title = translations.pageTitle[lang];
+            if (metaDescription) {
+              metaDescription.setAttribute("content", translations.pageDescription[lang]);
+            }
+            if (ogTitleTag) {
+              ogTitleTag.setAttribute("content", translations.ogTitle[lang]);
+            }
+            if (ogDescriptionTag) {
+              ogDescriptionTag.setAttribute("content", translations.ogDescription[lang]);
+            }
+
+            Object.entries(translations).forEach(([key, value]) => {
+              if (metaKeys.has(key)) {
+                return;
+              }
+              const el = document.querySelector(`[data-i18n="${key}"]`);
+              if (el && value[lang]) {
+                el.innerHTML = value[lang];
+              }
+            });
+
+            document.querySelectorAll(".lang-btn").forEach((btn) => {
+              const active = btn.dataset.lang === lang;
+              btn.classList.toggle("is-active", active);
+              btn.setAttribute("aria-pressed", active ? "true" : "false");
+            });
+          };
+
+          document.querySelectorAll(".lang-btn").forEach((btn) => {
+            btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+          });
+
+          setLanguage("ar");
+        })();
+      </script>
+
     </div>
   </div>
 </body>
