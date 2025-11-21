@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "person": {
+    "full_name_ar": "الحسان الغوالي",
+    "full_name_latin": "EL GHOULALI EL HASSAN",
+    "handle": "premiernbr",
+    "location": "Morocco",
+    "areas_of_focus": [
+      "Digital citizenship",
+      "Knowledge justice",
+      "AI & open data",
+      "Legal tech for Moroccan justice"
+    ]
+  },
+  "projects": [
+    {
+      "id": "digital_minaret",
+      "name_ar": "الصمعة الرقمية",
+      "name_en": "Digital Minaret",
+      "description_ar": "منظومة شخصية/بحثية لربط العدالة المغربية والبيانات المفتوحة بالذكاء الاصطناعي (محلي + سحابي).",
+      "status": "in-progress"
+    },
+    {
+      "id": "legalrag",
+      "name": "LegalRAG / المرشد الرقمي",
+      "description_en": "Experimental legal assistant for Moroccan users, based on official texts, procedures and retrieval-augmented generation.",
+      "status": "experimental",
+      "private_repo": true
+    }
+  ],
+  "links": {
+    "github_profile": "https://github.com/premiernbr",
+    "profile_repo": "https://github.com/premiernbr/premiernbr",
+    "linkedin": "https://www.linkedin.com/in/el-ghouali-el-hassan",
+    "facebook": "https://www.facebook.com/amielghouali"
+  },
+  "meta": {
+    "primary_language": "ar",
+    "languages": ["ar", "en", "fr"],
+    "last_update": "2025-11-21"
+  }
+}
