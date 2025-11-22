@@ -141,7 +141,7 @@ Développeur et chercheur en citoyenneté numérique et justice informationnelle
 
 ### 📬 Connect
 
-- GitHub: [@premiernbr](https://www.premiernbr.github.io/premiernbr)
+- GitHub: [@premiernbr](https://premiernbr.github.io/premiernbr/)
 - LinkedIn: [الحسان الغوالي](https://www.linkedin.com/in/el-ghouali-el-hassan)
 - فيسبوك: [أصدقاء العالم الافتراضي](https://facebook.com/amielghouali)
 
