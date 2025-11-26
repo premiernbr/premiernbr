@@ -90,9 +90,7 @@
     body {
       margin: 0;
       font-family: "Cairo", "Space Grotesk", "Segoe UI", "Noto Sans Arabic", system-ui, sans-serif;
-      background:
-        linear-gradient(135deg, rgba(5, 8, 22, 0.92), rgba(4, 7, 18, 0.88)),
-        url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png");
+      background: linear-gradient(135deg, rgba(5, 8, 22, 0.92), rgba(4, 7, 18, 0.88));
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -575,6 +573,28 @@
       }
       100% {
         clip-path: inset(0 0 0 100%);
+      }
+    }
+    @media (max-width: 700px) {
+      .attention-text {
+        animation: attentionMobile 6s ease-in-out infinite;
+        clip-path: none;
+        white-space: normal;
+      }
+    }
+
+    @keyframes attentionMobile {
+      0% {
+        transform: translateY(0);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(-4px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 0.9;
       }
     }
 
