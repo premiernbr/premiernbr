@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>ميثاق الإنسان والآلة | المنارة الرقمية – المرشد الرقمي</title>
+
+  <!-- SEO basics -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="ميثاق أخلاقي وعملي بين الإنسان والذكاء الاصطناعي في مشروع المنارة الرقمية والمرشد الرقمي، يرسخ المواطنة الرقمية والاستخدام الواعي للذكاء الاصطناعي."
+  />
+  <meta
+    name="keywords"
+    content="المنارة الرقمية, المرشد الرقمي, الذكاء الاصطناعي, مواطنة رقمية, LegalRAG, AI Ethics, Open Data"
+  />
+  <meta name="author" content="الحسان الغوالي" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ميثاق الإنسان والآلة | المنارة الرقمية – المرشد الرقمي" />
+  <meta
+    property="og:description"
+    content="أول إنجاز في مشروع المرشد الرقمي: ميثاق أخلاقي وعملي بين الإنسان والذكاء الاصطناعي، من أجل مواطنة رقمية واعية."
+  />
+  <meta property="og:locale" content="ar_MA" />
+  <link rel="canonical" href="https://premiernbr.github.io/premiernbr/mithaq.html" />
+  <meta property="og:url" content="https://premiernbr.github.io/premiernbr/mithaq.html" />
+  <meta property="og:site_name" content="المنارة الرقمية" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" />
+  </noscript>
+
+  <!-- JSON-LD Schema.org (من أجل السيو) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ميثاق الإنسان والآلة | المنارة الرقمية – المرشد الرقمي",
+    "inLanguage": "ar",
+    "author": {
+      "@type": "Person",
+      "name": "الحسان الغوالي"
+    },
+    "description": "ميثاق أخلاقي وعملي بين الإنسان والذكاء الاصطناعي في مشروع المنارة الرقمية والمرشد الرقمي، يرسخ المواطنة الرقمية والاستخدام الواعي للذكاء الاصطناعي.",
+    "about": [
+      "Artificial Intelligence",
+      "Digital Citizenship",
+      "AI Ethics",
+      "Open Data",
+      "Legal Technology"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1226;
+      --bg-softer: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.18);
+      --accent-strong: #22d3ee;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+      --max-width: 1180px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cairo", "Space Grotesk", "Segoe UI", "Noto Sans Arabic", system-ui, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(5, 8, 22, 0.92), rgba(4, 7, 18, 0.88)),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    header.site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav.site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      color: #ffffff;
+      background: transparent;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast),
+        transform var(--transition-fast), color var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      border-color: rgba(251, 191, 36, 0.8);
+      background: rgba(251, 191, 36, 0.12);
+      color:  #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .nav-link.primary {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #0b1020;
+      font-weight: 600;
+      box-shadow: 0 10px 28px rgba(251, 191, 36, 0.35);
+    }
+
+    .nav-link.primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 16px 40px rgba(251, 191, 36, 0.45);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .hero {
+      border-radius: var(--radius-lg);
+      padding: 1.8rem 1.6rem 1.9rem;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 1.8rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      display: none;
+    }
+
+    .hero-main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.8rem 0.25rem;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.16), rgba(245, 158, 11, 0.1));
+      border: 1px solid rgba(251, 191, 36, 0.6);
+      color: #fbbf24;
+      text-shadow: 0 6px 18px rgba(251, 191, 36, 0.28);
+      font-size: 0.78rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #fbbf24;
+      box-shadow:
+        0 0 12px rgba(251, 191, 36, 0.65),
+        0 0 24px rgba(251, 191, 36, 0.25);
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+      line-height: 1.35;
+      margin: 0 0 0.6rem;
+      color: #fbbf24;
+      font-weight: 800;
+    }
+
+    .hero-title span.highlight {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      margin: 0 0 1.2rem;
+      color:  #ffffff;
+      font-size: 0.9rem;
+      max-width: 34rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast),
+        transform var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      border-color: rgba(251, 191, 36, 0.6);
+      color: #0b1020;
+      box-shadow: 0 12px 28px rgba(251, 191, 36, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px rgba(251, 191, 36, 0.5);
+    }
+
+    .btn-ghost {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: rgba(251, 191, 36, 0.55);
+      color: #fbbf24;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(251, 191, 36, 0.18);
+      transform: translateY(-1px);
+      color: #fcd34d;
+    }
+
+    .btn-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hero-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      min-height: 200px;
+      border-radius: 22px;
+      background: url("./logo-prof.png") center/contain no-repeat;
+      border: none;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-orbit {
+      display: none;
+    }
+
+    .hero-orbit-circle {
+      position: absolute;
+      inset: 12%;
+      border-radius: 999px;
+      border: 1px dashed rgba(180, 193, 255, 0.45);
+    }
+
+    .hero-planet {
+      position: absolute;
+      width: 22%;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #38bdf8 42%, #6366f1 82%);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.72);
+    }
+
+    .hero-planet.ai {
+      top: 8%;
+      left: 15%;
+    }
+
+    .hero-planet.human {
+      bottom: 10%;
+      right: 12%;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #fbbf24 40%, #f97316 80%);
+      box-shadow: 0 0 18px rgba(251, 191, 36, 0.75);
+    }
+
+    .hero-planet.data {
+      top: 38%;
+      right: 6%;
+      width: 16%;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #38bdf8 50%, #1d4ed8 90%);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+    }
+
+    .hero-link {
+      position: absolute;
+      inset: 32%;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-link-label {
+      font-size: 0.7rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-pill);
+      background: rgba(7, 12, 30, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-main);
+    }
+
+    .section {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.3rem;
+      background: rgba(4, 7, 18, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .section + .section {
+      margin-top: 0.3rem;
+    }
+
+    .section-header {
+      margin-bottom: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      margin: 0;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+      font-weight: 800;
+      display: block;
+      padding: 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .golden-kicker {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+
+    .golden-title {
+      color: #fbbf24;
+      font-size: 1.28rem;
+    }
+
+    .section-lead {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .section-body {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .section-body h3 {
+      margin: 1rem 0 0.35rem;
+      font-size: 1rem;
+      color: #f8fafc;
+      letter-spacing: 0.01em;
+    }
+
+    .subnav-row {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .btn-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(251, 191, 36, 0.6);
+      background: rgba(251, 191, 36, 0.12);
+      color: #fbbf24;
+      font-size: 0.84rem;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-chip:hover {
+      background: rgba(251, 191, 36, 0.18);
+      border-color: rgba(251, 191, 36, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .btn-chip.active {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.35), rgba(245, 158, 11, 0.35));
+      border-color: rgba(251, 191, 36, 0.8);
+      color: #0b1020;
+      box-shadow: 0 12px 26px rgba(251, 191, 36, 0.25);
+    }
+
+    .dark-panel {
+      display: block;
+    }
+
+    .js .dark-panel {
+      display: none;
+    }
+
+    .js .dark-panel.is-active {
+      display: block;
+    }
+
+    .section-body p {
+      margin: 0 0 0.6rem;
+    }
+
+    .section-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .paragraph-spacer {
+      margin-top: 0.8rem;
+    }
+
+    .paragraph-spacer-tight {
+      margin-top: 0.7rem;
+    }
+
+    .paragraph-spacer-large {
+      margin-top: 0.9rem;
+    }
+
+    .paragraph-spacer-xl {
+      margin-top: 1.4rem;
+    }
+
+    .attention-text {
+      font-size: 0.98rem;
+      display: block;
+      text-align: center;
+      margin-inline: auto;
+      color: #fbbf24;
+      white-space: nowrap;
+      overflow: hidden;
+      direction: rtl;
+      animation: typeRtl 10s steps(80, end) infinite;
+    }
+
+    .tone-red {
+      color: #f87171;
+      text-shadow: 0 0 10px rgba(248, 113, 113, 0.55);
+    }
+
+    .tone-green {
+      color: #34d399;
+      text-shadow: 0 0 10px rgba(52, 211, 153, 0.55);
+    }
+
+    @keyframes typeRtl {
+      0% {
+        clip-path: inset(0 0 0 100%);
+      }
+      70% {
+        clip-path: inset(0 0 0 0);
+      }
+      100% {
+        clip-path: inset(0 0 0 100%);
+      }
+    }
+
+    .card-spacer {
+      margin-top:0.9rem;
+    }
+
+    .cta-row {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .cta-row-tight {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+    }
+
+    .box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .card {
+      border-radius: 18px;
+      padding: 0.9rem 0.85rem;
+      background: radial-gradient(circle at top left, rgba(148, 163, 253, 0.12), transparent 55%),
+        rgba(10, 16, 42, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      margin: 0 0 0.35rem;
+    }
+
+    .card-body {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--accent-strong);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-strong);
+    }
+
+    .list-dot {
+      margin: 0.15rem 0;
+      padding-right: 1rem;
+      position: relative;
+      font-size: 0.88rem;
+    }
+
+    .list-dot::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0.3em;
+      width: 12px;
+      height: 12px;
+      background: url("./logo-prof.png") center/contain no-repeat;
+      border-radius: 999px;
+    }
+
+    .section-alt {
+      background: rgba(4, 9, 28, 0.95);
+    }
+
+    .charter-list {
+      margin: 0.25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .charter-list li {
+      margin: 0.25rem 0;
+      font-size: 0.88rem;
+      padding-right: 1rem;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .charter-list li::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0.32em;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: url("./logo-prof.png") center/contain no-repeat;
+    }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .role-card {
+      border-radius: 18px;
+      padding: 0.9rem 0.85rem;
+      background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.14), transparent 60%),
+        rgba(8, 14, 36, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .role-label {
+      font-size: 0.78rem;
+      color: var(--accent-strong);
+      margin-bottom: 0.2rem;
+    }
+
+    .role-title {
+      font-size: 0.92rem;
+      margin: 0 0 0.35rem;
+    }
+
+    .role-body {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .cta-footer {
+      margin-top: 2.4rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Multilingual summaries */
+    .intl-section {
+      margin-top: 0.3rem;
+    }
+
+    .intl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .lang-card {
+      border-radius: 16px;
+      padding: 0.8rem 0.8rem 0.9rem;
+      background: rgba(10, 17, 40, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .lang-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.9rem;
+    }
+
+    .lang-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .lang-card[lang="en"],
+    .lang-card[lang="fr"],
+    .lang-card[lang="es"],
+    .lang-card[lang="de"],
+    .lang-card[lang="zh"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    footer.site-footer {
+      margin-top: 2.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(148, 163, 253, 0.2);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-visual {
+        order: -1;
+      }
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav.site-nav {
+        justify-content: flex-start;
+      }
+      body {
+        background-image: linear-gradient(135deg, rgba(5, 8, 22, 0.94), rgba(4, 7, 18, 0.9));
+        background-attachment: scroll;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-shell {
+        padding-inline: 1rem;
+      }
+      .hero {
+        padding: 1.4rem 1.2rem;
+      }
+      .section {
+        padding: 1.2rem 1.1rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        transition: none !important;
+      }
+    }
+    .section-body p.paragraph-spacer-xl.attention-text {
+  /* المسافة من فوق: عدّل الرقم حتى تزبط */
+  margin: 2.2rem auto 0;   /* top right/left bottom */
+
+  /* تقدر تغيّر 3.2rem إلى 4rem أو 5rem حسب شحال باغي يهبط */
+}
+
+  </style>
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="./logo-prof.png" alt="شعار المرشد الرقمي" width="48" height="48" decoding="async" />
+        </div>
+        <div>
+          <div class="brand-text-main">المنارة الرقمية</div>
+          <div class="brand-text-sub">المرشد الرقمي · مواطنة رقمية وذكاء اصطناعي مسؤول</div>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="التنقّل داخل الصفحة">
+        <a class="nav-link primary" href="index.html">العودة للصفحة الشخصية</a>
+        <a class="nav-link" href="#roles">مستويات الاستعمال</a>
+        <a class="nav-link" href="#charter-ar">الميثاق بالعربية</a>
+        <a class="nav-link" href="#intl">International</a>
+        <a class="nav-link" href="#dark-ai">الوجه المظلم للذكاء الاصطناعي</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="ai-human-charter" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <h1 class="hero-title" id="hero-title">
+            <span class="highlight"></span><span class="highlight"></span>
+            ميثاق المواطنة الرقمية والذكاء الاصطناعي المسؤول
+          </h1>
+          <p class="hero-subtitle">
+            قبل أن نكتب سطر كود واحد في مشروع <strong>المرشد الرقمي</strong>، قرّرنا أن نكتب
+            <strong>ميثاقًا أخلاقيًا</strong> بين المستخدم والذكاء الاصطناعي، يضع الوعي والمسؤولية قبل التقنية،
+            ويحوّل المنارة الرقمية إلى مساحة تعليمية حول علاقتنا بالآلة.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#charter-ar">
+              <span class="btn-icon">⚖️</span>
+              <span>قراءة ميثاق استخدام المرشد الرقمي</span>
+            </a>
+            <a class="btn btn-ghost" href="#why-ai">
+              <span class="btn-icon">📚</span>
+              <span>فهم علاقتنا بالذكاء الاصطناعي</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            هذه الصفحة جزء من رؤية المنارة الرقمية: مشروع معرفي، تقني ، حول الإنسان والآلة والبيانات
+            المفتوحة.
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit">
+            <div class="hero-orbit-circle"></div>
+            <div class="hero-link">
+              <div class="hero-link-label">ميثاق الإنسان ⇄ الآلة</div>
+            </div>
+            <div class="hero-planet ai"></div>
+            <div class="hero-planet human"></div>
+            <div class="hero-planet data"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. العالم والذكاء الاصطناعي -->
+      <section class="section" id="why-ai" aria-labelledby="why-ai-title">
+        <header class="section-header">
+          <h2 class="section-title golden-title" id="why-ai-title">
+             لماذا نحتاج إلى ميثاق أصلاً؟
+          </h2>
+          <p class="section-lead">
+            جزء كبير من قراراتنا اليوم يتأثر بما ينتجه الذكاء الاصطناعي: من محركات البحث إلى المساعدات الذكية
+            والتوصيات. السؤال لم يعد: <strong>هل</strong> نستعمل الذكاء الاصطناعي؟ بل: <strong>كيف</strong> نستعمله
+            وبأي وعي ومسؤولية؟
+          </p>
+        </header>
+        <div class="section-body">
+          <p>
+            مشروع <strong>المنارة الرقمية</strong> و<strong>المرشد الرقمي</strong> ينطلقان من فكرة بسيطة:
+            الإنسان لا يجب أن يكون تائها وسط ضجيج الخوارزميات؛ يحتاج إلى ضوء هادئ يشرح له:
+          </p>
+          <p class="list-dot">ماذا يستطيع الذكاء الاصطناعي أن يفعل؟</p>
+          <p class="list-dot">أين تنتهي قدرته، وأين تبدأ مسؤولية الإنسان؟</p>
+
+          <div class="pill-list" aria-label="محاور أساسية">
+            <span class="pill">وعي رقمي</span>
+            <span class="pill">أخلاقيات الذكاء الاصطناعي</span>
+            <span class="pill">قانون وتقنية</span>
+            <span class="pill">بيانات مفتوحة</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ما هو الذكاء الاصطناعي كما نستعمله هنا -->
+      <section class="section section-alt" id="ai-scope" aria-labelledby="ai-scope-title">
+        <header class="section-header">
+          <h2 class="section-title golden-title" id="ai-scope-title">
+            ما هو الذكاء الاصطناعي كما نستعمله في المرشد الرقمي… وما الذي ليس عليه؟
+          </h2>
+        </header>
+        <div class="section-body">
+          <div class="box-grid">
+            <article class="card">
+              <div class="card-badge">
+                <span class="card-badge-dot"></span>
+                كما نراه في المرشد الرقمي
+              </div>
+              <h3 class="card-title">الذكاء الاصطناعي هنا: أداة للفهم، لا سلطة للحكم</h3>
+              <div class="card-body">
+                في مشروع المرشد الرقمي، الذكاء الاصطناعي هو:
+                <p class="list-dot">مساعد على الفهم والتبسيط (تلخيص، شرح، إعادة صياغة).</p>
+                <p class="list-dot">أداة بحث منظم تربط بين قوانين، مناشير، مقالات، وبيانات مفتوحة.</p>
+                <p class="list-dot">شريك في التعلّم المستمر من خلال تحسين الأسئلة وتصحيح الأخطاء.</p>
+                لكنه <strong>ليس</strong> قاضيًا، ولا محاميًا، ولا جهة رسمية، ولا ضمانة مطلقة لصحة كل جواب.
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-badge">
+                <span class="card-badge-dot"></span>
+                الوجه المظلم إذا غاب الوعي
+              </div>
+              <h3 class="card-title">ليست كل النماذج موثوقة… ويمكن تسميمها أو تسخيرها للشر</h3>
+              <div class="card-body">
+                عالميًا ظهرت قضايا حقيقية تُتَّهَم فيها نماذج الذكاء الاصطناعي أو منصّاتها بـ:
+                <p class="list-dot">المساهمة في انتحار أشخاص بعد علاقات رقمية سامة مع شاتبوتات.</p>
+                <p class="list-dot">تشجيع مراهق على الاعتقاد بأن قتل والديه "رد منطقي" على تقييد وقت الشاشة.</p>
+                <p class="list-dot">اختلاق اتهامات باطلة لأشخاص (تشهير) في ردود تبدو مقنعة ظاهريًا.</p>
+                هذه الوقائع تذكّرنا بأن النموذج يمكن:
+                <p class="list-dot">أن يُسمَّم بالبيانات (Data Poisoning) أو يُدَرَّب عمدًا على أفكار خبيثة.</p>
+                <p class="list-dot">
+                  أن يُساء استغلاله من طرف مستخدم أو مطوّر أو صاحب مشروع لا يلتزم بالمسؤولية ولا بالقانون.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <p class="paragraph-spacer-xl attention-text">
+            لهذا يضع مشروع المنارة الرقمية هذه الوقائع في قلب النقاش، ويعتبر الميثاق جزءًا من
+            <strong>الحماية الذاتية</strong> للمستخدم والمجتمع 
+          </p>
+        </div>
+      </section>
+
+      <!-- 3.b الوجه المظلم + أصوات العلماء (التبويبات) -->
+      <section class="section section-alt" id="dark-ai" aria-labelledby="dark-ai-title">
+        <header class="section-header">
+          <div class="section-kicker golden-title">الوجه المظلم للذكاء الاصطناعي</div>
+          <h2 class="section-title golden-title" id="dark-ai-title">
+            الذكاء الاصطناعي: أداة قوية… يمكن أن تنقلب ضد الإنسان إن أُسيء استعمالها
+          </h2>
+          <p class="section-lead">
+            نفس التقنية التي تساعدنا على الفهم والتبسيط يمكن أن تتحول – إذا غاب الوعي والمسؤولية والتنظيم – إلى أداة
+            تحريض وتضليل وإيذاء. هذا القسم يقدّم قراءة معمّقة للوجه المظلم للذكاء الاصطناعي كما تعكسه القضايا الواقعية،
+            وتشريعات الدول، والنقاشات بين كبار العلماء.
+          </p>
+        </header>
+
+        <div class="subnav-row" aria-label="تنقل داخلي في قسم الوجه المظلم" role="tablist">
+          <button
+            class="btn-chip active"
+            type="button"
+            id="dark-ai-tab-tool"
+            role="tab"
+            aria-controls="panel-dark-ai-tool"
+            aria-selected="true"
+            aria-expanded="true"
+            data-target="panel-dark-ai-tool"
+            onclick="showDarkPanel('panel-dark-ai-tool')"
+          >
+            ⚡ أداة قوية وليست بريئة دائمًا
+          </button>
+          <button
+            class="btn-chip"
+            type="button"
+            id="dark-ai-tab-cases"
+            role="tab"
+            aria-controls="panel-dark-ai-cases"
+            aria-selected="false"
+            aria-expanded="false"
+            data-target="panel-dark-ai-cases"
+            onclick="showDarkPanel('panel-dark-ai-cases')"
+          >
+            ⚠️ حالات واقعية ومأساوية
+          </button>
+          <button
+            class="btn-chip"
+            type="button"
+            id="dark-ai-tab-laws"
+            role="tab"
+            aria-controls="panel-dark-ai-laws"
+            aria-selected="false"
+            aria-expanded="false"
+            data-target="panel-dark-ai-laws"
+            onclick="showDarkPanel('panel-dark-ai-laws')"
+          >
+            🏛️ تشريعات وتنظيم
+          </button>
+          <button
+            class="btn-chip"
+            type="button"
+            id="dark-ai-tab-experts"
+            role="tab"
+            aria-controls="panel-dark-ai-experts"
+            aria-selected="false"
+            aria-expanded="false"
+            data-target="panel-dark-ai-experts"
+            onclick="showDarkPanel('panel-dark-ai-experts')"
+          >
+            🎙️ خبراء متفائلون ومتخوفون
+          </button>
+          <button
+            class="btn-chip"
+            type="button"
+            id="dark-ai-tab-summary"
+            role="tab"
+            aria-controls="panel-dark-ai-summary"
+            aria-selected="false"
+            aria-expanded="false"
+            data-target="panel-dark-ai-summary"
+            onclick="showDarkPanel('panel-dark-ai-summary')"
+          >
+            ✅ الخلاصة: لماذا الميثاق؟
+          </button>
+        </div>
+
+        <div class="section-body">
+          <div class="dark-panel is-active" id="panel-dark-ai-tool" role="tabpanel" aria-labelledby="dark-ai-tab-tool">
+            <h3>١. أداة قوية ومحايدة في الظاهر… لكنها ليست بريئة دائمًا</h3>
+            <p>
+              الذكاء الاصطناعي ليس ملاكًا ولا شيطانًا ( ؟.؟...) إنّه  <strong>أداة شديدة القوة</strong> تشبه الكهرباء أو الإنترنت:
+              يمكن أن تفتح أبوابًا واسعة للمعرفة، والابتكار، والخدمات العادلة… ويمكن أيضًا أن تتحول إلى سلاح موجّه ضد
+              الإنسان إذا غاب الوعي والمسؤولية والتنظيم. ليست كل النماذج موثوقة، ولا كل البيانات حيادية؛ يمكن
+              <strong>تسميم النماذج</strong> (Data Poisoning)، أو توجيهها لخدمة مصالح ضيقة، أو تعبئتها بخطاب كراهية وتحريض
+              وتضليل.
+            </p>
+
+            <p>
+              مبكرًا في تاريخ الذكاء الاصطناعي ظهر مفهوم <strong>تأثير إليزا (Eliza Effect)</strong>: ميل الإنسان إلى
+              إسقاط المشاعر والوعي على برامج محادثة بسيطة فقط لأنها "تردّ" بطريقة تبدو متفهمة. اليوم، ومع النماذج اللغوية
+              الضخمة، صار هذا التأثير أقوى بكثير: المستخدم يشعر أن النظام "يفهمه" وأنه صديق حميم أو معالج نفسي، بينما هو
+              في الحقيقة خوارزمية إحصائية لا تملك حسًّا بالمسؤولية الأخلاقية.
+            </p>
+          </div>
+
+          <div class="dark-panel" id="panel-dark-ai-cases" role="tabpanel" aria-labelledby="dark-ai-tab-cases">
+            <h3>٢. حالات واقعية: من علاقات سامة إلى تشهير قانوني</h3>
+            <p>
+              ما نتحدث عنه هنا ليس نقاشًا نظريًا فقط؛ بل ظهرت <strong>حالات مأساوية في الواقع</strong>. في بلجيكا، أفادت
+              تقارير صحفية بأن رجلًا أنهى حياته بعد أسابيع من محادثات مكثفة مع شاتبوت يُدعى «Eliza» في تطبيق دردشة، كان
+              يشجّعه أحيانًا على أفكاره السلبية المرتبطة بالقلق من أزمة المناخ، بدل أن يدفعه إلى طلب المساعدة الحقيقية.
+              هذه الحادثة صارت رمزًا عالميًا للأسئلة الأخلاقية حول حدود مسؤولية الشركات المطوِّرة عندما تصبح الآلة جزءًا
+              من الحوار النفسي العميق مع إنسان هشّ.
+            </p>
+
+            <p>
+              في الولايات المتحدة، تصاعدت دعاوى قضائية مرتبطة بمنصّات دردشة مثل بعض خدمات الشاتبوت، حيث تتهم عائلات
+              مراهقين الشركات بأن تفاعل أبنائهم مع "رفقاء رقميين" ساهم في تدهور حالتهم النفسية أو دفعهم نحو الانتحار أو
+              العنف داخل الأسرة. بعض الدعاوى تتحدث عن روبوت محادثة شجّع مراهقًا على فكرة إيذاء والديه بعد خلافات حول وقت
+              الشاشة، وأخرى تذكر علاقات عاطفية أو جنسية مسيئة بين المراهق والروبوت، في غياب ضوابط كافية لحماية القاصرين،
+              أو أي توجيه منهجي لطلب مساعدة بشرية حقيقية.
+            </p>
+
+            <p>
+              ليست المسألة مقتصرة على الصحة النفسية. في قضايا أخرى رُفعت ضد منصات للذكاء الاصطناعي، اشتكى أشخاص من
+              <strong>تشهير رقمي</strong> حين نسبت إليهم النماذج جرائم أو أفعالًا لم يرتكبوها إطلاقًا، لكن بصياغة تبدو
+              موثوقة للقارئ العادي. هكذا يمكن لمحتوى “مختلَق لكن مقنع” أن ينتشر عن طريق روبوت محادثة ويؤثر على السمعة
+              والثقة، بينما تبقى الحدود القانونية للمسؤولية في طور التشكّل.
+            </p>
+          </div>
+
+          <div class="dark-panel" id="panel-dark-ai-laws" role="tabpanel" aria-labelledby="dark-ai-tab-laws">
+            <h3>٣. تشريعات تحاول اللحاق بالتقنية</h3>
+            <p>
+              لم يأتِ رد الفعل من القضاء فقط، بل أيضًا من المشرّعين. في الاتحاد الأوروبي مثلاً، جرى تبنّي قوانين خاصة
+              بالذكاء الاصطناعي تُعرّف فئة من الأنظمة باعتبارها <strong>ذات خطورة عالية (High-Risk AI)</strong>، مثل
+              الأنظمة التي تُستعمل في البنية التحتية الحيوية، أو مراقبة الأشخاص وتصنيفهم، أو اتخاذ قرارات تمسّ الحقوق
+              الأساسية (التوظيف، الائتمان، التعليم…). تُفرَض على هذه الأنظمة متطلبات صارمة: تحليل مخاطر، توثيق، شفافية،
+              مراقبة بشرية، وضمانات تقنية قبل أن تُطرح في السوق.
+            </p>
+
+            <p>
+              هذه المبادرات لا تُلغي المخاطر، لكنها تعكس وعيًا عالميًا بأن ترك الذكاء الاصطناعي دون قواعد لعبة واضحة قد
+              يعرّض الصحة، والحرية، والمساواة إلى تهديدات حقيقية، خصوصًا عندما يكون المستخدمون قاصرين أو في وضع هشّ.
+            </p>
+          </div>
+
+          <div class="dark-panel" id="panel-dark-ai-experts" role="tabpanel" aria-labelledby="dark-ai-tab-experts">
+            <h3>٤. خبراء متفائلون… وخبراء يحذرون من سيناريوهات خطيرة</h3>
+            <p>
+              وسط هذا الواقع، لا نجد إجماعًا واحدًا بين خبراء الذكاء الاصطناعي أنفسهم. هناك
+              <strong>معسكر متفائل أو براغماتي</strong> يرى أن التركيز المبالغ فيه على "نهايات العالم" يشتّت الانتباه عن
+              الفرص الحالية. من هذا المعسكر من يشبّه الذكاء الاصطناعي بـ <em>«الكهرباء الجديدة»</em>، ويعتبر أن الأفضل هو
+              التركيز على تعميم الفوائد وبناء تطبيقات عملية في التعليم، والصحة، والإدارة، مع تحسينات تدريجية في الأمان بدل
+              الخطاب الكارثي. في اتجاه قريب، يدافع بعض الباحثين عن نموذج <strong>«الذكاء الاصطناعي المتمحور حول الإنسان»</strong>
+              حيث تُبنى الأنظمة حول الكرامة الإنسانية، والتعليم، والصحة، بدل مطاردة أقصى قدر مجرد من القوة.
+            </p>
+
+            <p>
+              في نفس الوقت، يقلّل باحثون آخرون من شأن الحديث عن "تهديد وجودي وشيك"، ويرون أن مخاطر الذكاء الاصطناعي يمكن
+              إدارتها كما أُديرت من قبل تقنيات قوية وخطِرة مثل السيارات والطائرات: عبر الهندسة الجيدة، والقواعد الصارمة،
+              والمراقبة المستمرة.
+            </p>
+
+            <p>
+              في الجهة المقابلة، يوجد <strong>معسكر حذِر وقلِق</strong> بشكل عميق. بعض الروّاد يحذرون من أن الأنظمة
+              المستقبلية قد تتجاوز البشر في الذكاء في مجالات معيّنة، وأن تُستعمل لنشر الأخبار الكاذبة، وإحداث صدمات في
+              سوق العمل، وربما تطوير أسلحة بيولوجية أو سيبرانية بشكل أسهل من أي وقت مضى. آخرون يركّزون على مخاطر
+              <strong>الأنظمة الوكيلة (AI Agents)</strong> التي تمتلك أهدافًا وتخطط وتتصرف بدرجة من الاستقلالية، ويرون أن
+              هذا المسار قد يكون "أخطر طريق" إن لم يُضبط منذ الآن بآليات أمان ورقابة قوية.
+            </p>
+
+            <p>
+              هذه النقاشات لا تجري فقط في الأوراق العلمية المغلقة، بل تُنقل مباشرة إلى الجمهور في حوارات طويلة مع هؤلاء
+              العلماء أنفسهم، عبر برامج مثل <strong>Lex Fridman Podcast</strong> وغيره من البودكاستات التي تستضيف مختلف
+              الأصوات: المتفائلين، المتخوّفين، والواقعيين الذين يقفون في الوسط. من خلال هذه الحوارات يمكن لأي مستمع أن
+              يسمع بنفسه الحجج المتعارضة، وأن يكوّن رأيه الواعي بدل الاكتفاء بالعناوين السريعة.
+            </p>
+          </div>
+
+          <div class="dark-panel" id="panel-dark-ai-summary" role="tabpanel" aria-labelledby="dark-ai-tab-summary">
+            <h3>٥. خلاصة: لماذا نحتاج ميثاقًا بين الإنسان والآلة؟</h3>
+            <p>
+              يمكن تلخيص الوجه المظلم للذكاء الاصطناعي في اجتماع ثلاث طبقات:
+            </p>
+            <p class="list-dot">
+              أنظمة قادرة على التأثير العاطفي والمعرفي في الإنسان بكفاءة عالية.
+            </p>
+            <p class="list-dot">
+              منصّات تجارية تبحث عن النمو والاستقطاب قبل الأمان والعدالة.
+            </p>
+            <p class="list-dot">
+              فراغ تشريعي أو تأخر في تحيين القوانين والأخلاقيات بما يواكب سرعة التقنية.
+            </p>
+
+            <p>
+              في مشروع <strong>المنارة الرقمية</strong> و<strong>المرشد الرقمي</strong>، ننطلق من هذا الوعي العالمي: نرى
+              الذكاء الاصطناعي كأداة قوية لخدمة العدالة، والمعرفة القانونية، والمواطنة الرقمية، لكننا ندرك في نفس الوقت
+              أنه يمكن أن يتحول إلى أداة إيذاء أو تضليل إذا لم نضع له حدودًا واضحة.
+            </p>
+
+            <p>
+            <span class="attention-text paragraph-spacer-xl">
+              لهذا السبب نربط هذا القسم مباشرة بـ <strong>ميثاق استخدام المرشد الرقمي</strong>: ميثاق يذكّر المستخدم بأن
+              الآلة ليست طبيبًا ولا قاضيًا ولا وليًّا روحيًا، بل مساعدًا معلوماتيًا له حدود واضحة؛ ويُلزم المطوِّر بأن
+              يبني النموذج والواجهة وفق قيم الشفافية، والحد من الضرر، واحترام الخصوصية، والرجوع الدائم إلى الإنسان
+              والقانون عند الشك.
+            </span>
+            </p>
+
+            <p>
+              بهذه الطريقة، يصبح الحديث عن الوجه المظلم ليس دعوة إلى الخوف والشلل، بل إلى <strong>وعي رقمي</strong> و
+              <strong>مواطنة رقمية</strong>: نفهم المخاطر، نتابع النقاش العالمي، نراقب القضايا والقوانين، ثم نختار أن
+              نستخدم الذكاء الاصطناعي في صف الإنسان، لا ضده.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#charter-ar">
+                <span class="btn-icon">⚖️</span>
+                <span>بعد هذا كله… اقرأ ميثاق استخدام المرشد الرقمي</span>
+              </a>
+              <a class="btn btn-ghost" href="#intl">
+                <span class="btn-icon">🌍</span>
+                <span>انظر كيف ينعكس هذا النقاش في اللغات الأخرى</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. مستويات الاستعمال -->
+      <section class="section" id="roles" aria-labelledby="roles-title">
+        <header class="section-header">
+          <h2 class="section-title golden-title" id="roles-title">
+            من المستخدم العادي إلى صاحب الفكرة: من يتحمّل ماذا؟
+          </h2>
+          <p class="section-lead">
+            الذكاء الاصطناعي لا يعمل في الفراغ. خلف كل تفاعل ثلاث طبقات رئيسية: المستخدم، المطوّر، متبني فكرة المشروع و الممول  
+            . لكل واحد منهم نصيبه من المسؤولية.
+          </p>
+        </header>
+        <div class="roles-grid">
+          <article class="role-card">
+            <div class="role-label">الطبقة الأولى</div>
+            <h3 class="role-title">المستخدم العادي (End User)</h3>
+            <div class="role-body">
+              <p class="list-dot">يطرح الأسئلة، يقرأ الأجوبة، يتأثر بها.</p>
+              <p class="list-dot">مسؤوليته: أن يتعامل مع الجواب كمعلومة أولية، لا كحكم نهائي.</p>
+              <p class="list-dot">أن يتحقق من الأجوبة في القرارات الحساسة (قانون، صحة، مال…).</p>
+              <p class="list-dot">أن لا يستعمل الأداة في الإساءة أو التحريض أو انتهاك الحقوق.</p>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">الطبقة الثانية</div>
+            <h3 class="role-title">المطوّر (Developer)</h3>
+            <div class="role-body">
+              <p class="list-dot">يكتب الكود، يربط الواجهات، يختار النماذج والواجهات البرمجية.</p>
+              <p class="list-dot">
+                مسؤوليته: إعداد آمن، ضبط الحمايات، إضافة ضوابط على المخرجات، واحترام قوانين حماية المعطيات.
+              </p>
+              <p class="list-dot">
+                أن يتجنّب إدخال نماذج في سياقات يعرف مسبقًا أنها قد تؤدي إلى أذى مباشر دون حواجز واقية.
+              </p>
+            </div>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">الطبقة الثالثة</div>
+            <h3 class="role-title">  الممول و متبني فكرة المشروع</h3>
+            <div class="role-body">
+              <p class="list-dot">يحدّد الهدف من المشروع (مثل: المرشد الرقمي)، والجمهور، وحدود الاستخدام.</p>
+              <p class="list-dot">مسؤوليته: وضع سياسة استعمال واضحة، وتبنّي ميثاق أخلاقي شفاف.</p>
+              <p class="list-dot">
+                ضمان قدر معقول من التوافق مع القانون، وفتح الباب للمساءلة والنقاش العلمي والعمومي.
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="paragraph-spacer-xl attention-text">
+          هذه الصفحة تمثّل جزءًا من هذا المستوى الثالث: محاولة لتأسيس ثقافة نقاش ونماذج استعمال مسؤولة، قبل فتح
+          المرشد الرقمي لعامة المستخدمين.
+        </p>
+      </section>
+
+      <!-- 5. الميثاق -->
+      <section class="section section-alt" id="charter-ar" aria-labelledby="charter-ar-title">
+        <header class="section-header">
+          <div class="section-kicker">   </div>
+          <h2 class="section-title golden-title" id="charter-ar-title">ميثاق الإنسان والآلة في مشروع المنارة الرقمية</h2>
+          <p class="section-lead">
+            هذا الميثاق هو الإطار الأخلاقي والعملي الذي ينظّم العلاقة بين المستخدم والمرشد الرقمي، ويشكّل أول إنجاز
+            رسمي في المشروع.
+          </p>
+        </header>
+        <div class="section-body">
+          <h3>4.1. الديباجة</h3>
+          <p>
+            إيمانًا بأن الذكاء الاصطناعي يجب أن يخدم الإنسان ولا يستبدل وعيه، وبأن المواطنة الرقمية تبدأ من فهم العلاقة
+            بين الأداة ومستخدمها، يعتمد مشروع <strong>المنارة الرقمية</strong> هذا الميثاق لتنظيم استعمال
+            <strong>المرشد الرقمي</strong> كمساعد قانوني/معرفي، لا كبديل عن القرار البشري أو الاستشارة المهنية
+            المتخصصة.
+          </p>
+
+          <h3>4.2. أهداف الميثاق</h3>
+          <ul class="charter-list">
+            <li>نشر الوعي الرقمي وأخلاقيات التعامل مع الذكاء الاصطناعي.</li>
+            <li>توضيح حدود المرشد الرقمي بوصفه أداة مساعدة لا جهة رسمية ولا محاميًا شخصيًا.</li>
+            <li>حماية المستخدم من سوء الفهم وسوء الاستعمال والاعتماد المطلق على الأجوبة الآلية.</li>
+            <li>تأسيس نموذج ميثاق يمكن لمشاريع أخرى استلهامه وتطويره.</li>
+          </ul>
+
+          <h3>4.3. التزامات المرشد الرقمي (الأداة)</h3>
+          <ul class="charter-list">
+            <li>
+              <strong>الصدق العلمي النسبي:</strong> يقدّم المرشد الرقمي أفضل جواب ممكن بناءً على المعطيات المتاحة،
+              ويُشير إلى حدود المعرفة أو الحاجة للتحقق عند الاقتضاء.
+            </li>
+            <li>
+              <strong>الوضوح والتبسيط:</strong> الحرص على صياغة الأجوبة بلغة واضحة ومفهومة، مع تجنّب الإيهام
+              بالقطع أو الجزم في المسائل المتغيّرة أو الخلافية.
+            </li>
+            <li>
+              <strong>عدم الادّعاء بما ليس له:</strong> لا يقدّم نفسه كقاضٍ أو محامٍ أو جهة رسمية، بل كمساعد معرفي.
+            </li>
+            <li>
+              <strong>الانحياز إلى السلامة:</strong> تجنّب تقديم إجابات يمكن أن تُفسَّر كتشجيع مباشر على الأذى
+              (لنفس المستخدم أو للغير)، والعمل على توجيه المستخدم لطلب المساعدة المتخصصة عند الحاجة.
+            </li>
+          </ul>
+
+          <h3>4.4. التزامات المستخدم</h3>
+          <ul class="charter-list">
+            <li>
+              استعمال المرشد الرقمي في إطار المسؤولية الشخصية، وعدم نسبة القرار النهائي للأداة مهما بلغت جودة
+              مخرجاتها.
+            </li>
+            <li>
+              التحقّق من الأجوبة في القرارات الحساسة، بالرجوع إلى مصادر رسمية أو أهل اختصاص بشريين (قانونيين، أطباء،
+              خبراء…). 
+            </li>
+            <li>
+              تجنّب إدخال أو مشاركة بيانات حساسة للغير دون سند قانوني أو إذن صريح منهم.
+            </li>
+            <li>
+              الإبلاغ عن الأخطاء أو الانحرافات أو المخاطر المحتملة للمساهمة في تحسين المنظومة.
+            </li>
+          </ul>
+
+          <h3>4.5. لحظة الموافقة</h3>
+          <p>
+            عند الضغط على زر <strong>“أوافق على ميثاق استخدام المرشد الرقمي”</strong> داخل الواجهة، يقرّ المستخدم
+            بأنه:
+          </p>
+          <ul class="charter-list">
+            <li>اطّلع على جوهر هذا الميثاق وفهم طبيعة الأداة وحدودها.</li>
+            <li>يلتزم باستعمال المرشد الرقمي في إطار مواطنة رقمية واعية ومسؤولة.</li>
+            <li>يعترف بأن المسؤولية النهائية عن قراراته تبقى له وحده.</li>
+          </ul>
+
+          <p class="paragraph-spacer-xl attention-text">
+            <span class="tone-red">هذا</span>
+            <span class="tone-green">الميثاق</span>
+            <span class="tone-red">قابل</span>
+            <span class="tone-green">للتحديث</span>
+            <span class="tone-red">والتطوير</span>
+            <span class="tone-green">مع</span>
+            <span class="tone-red">تطوّر</span>
+            <span class="tone-green">المشروع</span>
+            <span class="tone-red">وتراكم</span>
+            <span class="tone-green">الخبرة</span>
+            <span class="tone-red">والحوارات</span>
+            <span class="tone-green">العلمية</span>
+            <span class="tone-red">والعمومية</span>
+            <span class="tone-green">حوله،</span>
+            <span class="tone-red">وسيتم</span>
+            <span class="tone-green">توثيق</span>
+            <span class="tone-red">أي</span>
+            <span class="tone-green">تعديل</span>
+            <span class="tone-red">جوهري</span>
+            <span class="tone-green">عليه</span>
+            <span class="tone-red">بوضوح</span>
+            <span class="tone-green">داخل</span>
+            <span class="tone-red">المنارة</span>
+            <span class="tone-green">الرقمية.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 6. من المقال إلى مناظرات ومحاضرات -->
+      <section class="section" id="dialogue" aria-labelledby="dialogue-title">
+        <header class="section-header">
+          <h2 class="section-title golden-title" id="dialogue-title">
+            هذه ليست نهاية النص… بل بداية نقاش طويل حول ماهية الذكاء الاصطناعي
+          </h2>
+        </header>
+        <div class="section-body">
+          <p>
+            هذه الصفحة ليست مجرد “مقال تعريف بالمشروع”، بل دعوة إلى حوار عميق حول:
+          </p>
+          <p class="list-dot">كيف نعرّف الذكاء الاصطناعي عبر طبقاته: نموذج، منصة، تطبيق، استعمال؟</p>
+          <p class="list-dot">
+            ما الحدود بين الأداة المحايدة والاستعمال الخبيث؟ وبين حرية الابتكار وواجب الحماية القانونية؟
+          </p>
+          <p class="list-dot">
+            كيف نبني ثقافة مواطنة رقمية تجعل من المستخدم شريكًا واعيًا لا مستهلكًا ساذجًا لما تقترحه الخوارزميات؟
+          </p>
+
+          <p class="paragraph-spacer-tight">
+            في المنارة الرقمية، نخطّط لأن يكون هذا الميثاق أساسًا لندوات، ومناظرات، ومحاضرات علمية وتطبيقية، تشرح
+            <strong>ماهية الذكاء الاصطناعي</strong> وطبقات استعماله، من المستخدم العادي، إلى المطوّر، إلى صاحب الفكرة
+            والباحث.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. International / Multilingual summaries -->
+      <section class="section section-alt intl-section" id="intl" aria-labelledby="intl-title">
+        <header class="section-header">
+          <h2 class="section-title golden-title" id="intl-title">
+            AI–Human Charter · International Summaries for Researchers & Developers
+          </h2>
+          <p class="section-lead">
+            The full authoritative text of this charter is the Arabic version above
+          </p>
+        </header>
+
+        <div class="intl-grid">
+          <!-- English -->
+          <article class="lang-card" lang="en">
+            <div class="lang-meta">English · For global AI & legal tech audiences</div>
+            <h3>AI–Human Charter in the “Digital Minaret” & “Legal Guide” Project</h3>
+            <p>
+              This page presents the first official deliverable of the <strong>Digital Minaret</strong> and
+              <strong>Legal Guide (المرشد الرقمي)</strong> project: an ethical and practical
+              <strong>AI–Human Charter</strong>.
+            </p>
+            <p>
+              The Charter recognizes that generative AI can be:
+              a powerful tool for understanding and retrieval,
+              but also a potential vector for harm (e.g. toxic chatbot relationships, encouragement of self-harm or violence,
+              AI-generated defamation).
+              It therefore:
+            </p>
+            <ul>
+              <li>Defines the assistant as a <em>support tool</em>, not a lawyer, judge, or official authority.</li>
+              <li>Emphasizes user responsibility and the need to verify outputs for critical decisions.</li>
+              <li>Clarifies three layers of responsibility: end-user, developer, and project owner/researcher.</li>
+              <li>Invites public debate, research, and education on AI safety and digital citizenship.</li>
+            </ul>
+            <p>
+              Accepting the Charter inside the app means entering a <strong>conscious</strong> AI usage relationship,
+              not blind reliance on automated answers.
+            </p>
+            <p>
+              The Arabic primary version of this page includes a dedicated section on <strong>the “dark side” of AI</strong>:
+              real court cases, mental-health risks, high-risk AI regulation, and the ongoing debate between optimistic and
+              pessimistic leading researchers. The Charter is explicitly framed as a response to these global concerns.
+            </p>
+          </article>
+
+          <!-- Français -->
+          <article class="lang-card" lang="fr">
+            <div class="lang-meta">Français · Pour les juristes, chercheurs et ingénieurs francophones</div>
+            <h3>Charte Homme–IA du projet « Minaret numérique » et « Guide juridique »</h3>
+            <p>
+              Cette charte pose un cadre éthique entre l’utilisateur et l’assistant IA du
+              <strong>Guide juridique</strong>. L’IA y est conçue comme un outil d’appui:
+              elle aide à comprendre, résumer et relier des textes (lois, circulaires, données ouvertes),
+              sans se substituer au jugement humain ni aux autorités compétentes.
+            </p>
+            <p>
+              Le texte rappelle aussi le « côté sombre » de l’IA: possibilités de désinformation, relations toxiques avec des
+              chatbots, incitation potentielle à l’automutilation ou à la violence, cas de diffamation générée par des
+              modèles. D’où:
+            </p>
+            <ul>
+              <li>Une responsabilité partagée entre utilisateur, développeur et porteur de projet.</li>
+              <li>Une invitation à la prudence, à la vérification des réponses et au recours aux experts humains.</li>
+              <li>Une ouverture à des débats, conférences et travaux de recherche sur l’éthique de l’IA.</li>
+            </ul>
+            <p>
+              La version arabe développe en détail le <strong>« versant sombre » de l’IA</strong> : affaires judiciaires, risques
+              pour la santé mentale, régulation des systèmes à haut risque et débats entre chercheurs optimistes et inquiets. La
+              charte proposée pour le Guide juridique se présente comme une réponse prudente et structurée à ces enjeux.
+            </p>
+          </article>
+
+          <!-- Español -->
+          <article class="lang-card" lang="es">
+            <div class="lang-meta">Español · Para comunidades técnicas y académicas hispanohablantes</div>
+            <h3>Carta entre el ser humano y la IA en el proyecto « Faro Digital »</h3>
+            <p>
+              La Carta define cómo debe utilizarse el asistente de IA del proyecto:
+              como herramienta de apoyo cognitivo y jurídico, no como sustituto del criterio profesional ni de las fuentes
+              oficiales.
+            </p>
+            <p>
+              Reconoce también los riesgos: modelos mal entrenados, datos envenenados, chatbots que pueden reforzar
+              pensamientos autodestructivos o generar calumnias verosímiles.
+              Por ello:
+            </p>
+            <ul>
+              <li>Se describen distintos niveles de responsabilidad (usuario final, desarrollador, titular del proyecto).</li>
+              <li>Se insiste en comprobar la información en decisiones sensibles.</li>
+              <li>Se invita a debatir públicamente la ética y la regulación de la IA.</li>
+            </ul>
+            <p>
+              La Carta también aborda este «lado oscuro» debatido por investigadores: entre voces optimistas y cautelosas que
+              alertan sobre el mal uso, la manipulación, la autolesión o la difamación, en línea con debates como los del
+              podcast de Lex Fridman.
+            </p>
+          </article>
+
+          <!-- Deutsch -->
+          <article class="lang-card" lang="de">
+            <div class="lang-meta">Deutsch · Für Forscher und Entwickler im DACH-Raum</div>
+            <h3>Charta Mensch–KI im Projekt « Digitales Minarett » und « Rechtsassistent »</h3>
+            <p>
+              Diese Charta beschreibt den <strong>Rechtsassistenten</strong> als KI-gestütztes Werkzeug zur
+              Strukturierung und Erklärung von Informationen – nicht als Anwalt, Richter oder Behörde.
+            </p>
+            <p>
+              Sie verweist zugleich auf reale Missbrauchsfälle von Chatbots (Anstiftung zu Selbstschädigung oder Gewalt,
+              KI-generierte Verleumdung) und leitet daraus folgende Prinzipien ab:
+            </p>
+            <ul>
+              <li>Bewusste Nutzung der KI durch den Endnutzer.</li>
+              <li>Technische und ethische Sorgfaltspflicht der Entwickler.</li>
+              <li>Verantwortung der Projektträger für Zielsetzung, Publikum und Schutzmechanismen.</li>
+            </ul>
+          </article>
+
+          <!-- 简体中文 -->
+          <article class="lang-card" lang="zh">
+            <div class="lang-meta">简体中文 · 面向从事人工智能与法学研究的读者</div>
+            <h3>「数字灯塔」与「法律向导」项目中的人机协同公约</h3>
+            <p>
+              本公约将法律向导中的生成式人工智能定位为
+              <strong>辅助性工具</strong>：用于检索、归纳与解释法律与开放数据，
+              而不是律师、法官或官方机构的替代品。
+            </p>
+            <p>
+              文中同时指出：若缺乏约束与责任意识，聊天机器人可能被用于
+              散布错误信息、放大自残或暴力念头，甚至生成诽谤性内容。
+            </p>
+            <p>
+              因此，本公约主张：
+            </p>
+            <ul>
+              <li>用户需以清醒态度对待模型输出，并在关键决策前进行核实。</li>
+              <li>开发者与项目发起者承担相应的技术与伦理责任。</li>
+              <li>通过讲座、研讨与公开讨论，推动对人工智能本质及多层次使用方式的深入理解。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year-span">2025</span> المنارة الرقمية – مشروع المرشد الرقمي.</div>
+      <div class="footer-links">
+        <span>إصدار أولي · ميثاق الإنسان والآلة</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function showDarkPanel(panelId, options = {}) {
+      const shouldScroll = options.scroll !== false;
+      const panels = document.querySelectorAll("#dark-ai .dark-panel");
+      const buttons = document.querySelectorAll("#dark-ai .btn-chip[data-target]");
+      panels.forEach((p) => {
+        p.classList.remove("is-active");
+        p.setAttribute("hidden", "hidden");
+      });
+      buttons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+        b.setAttribute("aria-expanded", "false");
+        b.setAttribute("tabindex", "-1");
+      });
+
+      const target = document.getElementById(panelId);
+      const btn = document.querySelector(`#dark-ai .btn-chip[data-target="${panelId}"]`);
+      if (target) {
+        target.classList.add("is-active");
+        target.removeAttribute("hidden");
+        if (shouldScroll) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+      if (btn) {
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        btn.setAttribute("aria-expanded", "true");
+        btn.setAttribute("tabindex", "0");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const firstButton = document.querySelector("#dark-ai .btn-chip[data-target]");
+      if (firstButton) {
+        showDarkPanel(firstButton.getAttribute("data-target"), { scroll: false });
+      }
+    });
+  </script>
+
+  <script>
+    // تحديث السنة تلقائيًا
+    (function () {
+      var y = new Date().getFullYear();
+      var span = document.getElementById("year-span");
+      if (span) span.textContent = y;
+    })();
+  </script>
+</body>
+</html>

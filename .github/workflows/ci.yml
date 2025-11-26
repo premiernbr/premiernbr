@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  basic-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Basic sanity check
+        run: |
+          echo "CI running for $GITHUB_REPOSITORY"
+          echo "Commit: $GITHUB_SHA"

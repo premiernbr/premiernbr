@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://premiernbr.github.io/premiernbr/sitemap.xml
